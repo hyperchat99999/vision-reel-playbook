@@ -1,0 +1,18 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+body.render .sidebar,
+body.render .workspace,
+body.render .card,
+body.render .nav {
+  transition: none !important;
+}
+

@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a problem with the starter, docs, or scripts.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include commands and expected output.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This issue does not include private names, screenshots, prompts, API keys, or client data.
+          required: true
+

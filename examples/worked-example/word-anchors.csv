@@ -1,0 +1,12 @@
+beat_id,local_time,trigger_word,visual_actor,action,source_file_or_note,status
+b01,0.70,question,film loop,show question station,draft timing,draft
+b01,1.10,product,film loop,show real UI station,draft timing,draft
+b01,1.50,proof,film loop,show proof station,draft timing,draft
+b02,1.80,gap,gap card,hot ring active card,draft timing,draft
+b02,4.80,actions,plan rows,switch to plan view,draft timing,draft
+b02,6.00,explains,explanation panel,stream reason,draft timing,draft
+b03,0.90,question,proof pills,activate question pill,draft timing,draft
+b03,1.25,evidence,proof pills,activate evidence pill,draft timing,draft
+b03,1.60,plan,proof pills,activate plan pill,draft timing,draft
+b03,1.95,record,proof pills,activate record pill,draft timing,draft
+

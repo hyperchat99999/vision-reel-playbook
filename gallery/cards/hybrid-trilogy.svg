@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-label="Hybrid trilogy showcase card">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#f1f5fc"/></linearGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#0b1f33" flood-opacity=".14"/></filter>
+    <style>.ink{fill:#0b1f33}.muted{fill:#5b708a}.accent{fill:#1d4fd8}.small{font:800 13px Inter,Segoe UI,Arial;letter-spacing:.12em}.title{font:850 36px Inter,Segoe UI,Arial}.body{font:500 17px Inter,Segoe UI,Arial}</style>
+  </defs>
+  <rect width="980" height="560" rx="24" fill="url(#bg)"/>
+  <text class="small accent" x="54" y="68">SHOWCASE / HYBRID</text>
+  <text class="title ink" x="54" y="116">Hybrid trilogy</text>
+  <text class="body muted" x="54" y="150">Human setup, real UI proof, executive close.</text>
+  <g transform="translate(70 220)" filter="url(#sh)">
+    <rect width="230" height="188" rx="18" fill="#fff" stroke="#d9e2f2"/>
+    <circle cx="115" cy="78" r="38" fill="#e8efff"/>
+    <path d="M86 138c18-22 40-32 66-31 24 1 43 12 58 31" fill="none" stroke="#1d4fd8" stroke-width="8" stroke-linecap="round"/>
+    <text x="62" y="166" class="small muted">HUMAN SETUP</text>
+  </g>
+  <path d="M324 314h90" stroke="#1d4fd8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M402 300l18 14-18 14" fill="none" stroke="#1d4fd8" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(438 190)" filter="url(#sh)">
+    <rect width="250" height="248" rx="18" fill="#fff" stroke="#1d4fd8" stroke-width="4"/>
+    <rect x="28" y="38" width="194" height="36" rx="8" fill="#e8efff"/>
+    <rect x="28" y="96" width="88" height="86" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="134" y="96" width="88" height="86" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <text x="62" y="216" class="small muted">REAL UI PROOF</text>
+  </g>
+  <path d="M712 314h90" stroke="#1d4fd8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M790 300l18 14-18 14" fill="none" stroke="#1d4fd8" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(822 220)" filter="url(#sh)">
+    <rect width="90" height="188" rx="18" fill="#0b1f33"/>
+    <text x="26" y="84" fill="#fff" font-size="38" font-family="Inter,Segoe UI,Arial" font-weight="850">3</text>
+    <text x="22" y="124" fill="#dce8f7" font-size="13" font-family="Inter,Segoe UI,Arial" font-weight="800">PARTS</text>
+  </g>
+</svg>
+

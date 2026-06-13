@@ -1,0 +1,21 @@
+{
+  "name": "vision-reel-playbook",
+  "private": false,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "setup": "npm --prefix starter/app install",
+    "dev": "npm --prefix starter/app run dev",
+    "render:sample": "node starter/render/render-sample.cjs",
+    "gif": "node starter/scripts/make-gif.cjs",
+    "gallery:check": "node -e \"const fs=require('fs'); const m=JSON.parse(fs.readFileSync('gallery/manifest.json','utf8')); for (const i of m.items) if(!fs.existsSync(i.asset)) throw new Error('Missing gallery asset '+i.asset); console.log('gallery ok')\"",
+    "check": "npm run scan:ip && npm run check:timing && npm run gallery:check && npm run check:scripts && npm run check:json && npm run check:links",
+    "scan:ip": "node starter/scripts/ip-scan.cjs .",
+    "check:timing": "node starter/scripts/timing-spot-check.cjs templates/word-anchor-map.csv",
+    "check:scripts": "node --check starter/render/render.cjs && node --check starter/render/render-sample.cjs && node --check starter/scripts/ip-scan.cjs && node --check starter/scripts/blank-frame-check.cjs && node --check starter/scripts/contact-sheet.cjs && node --check starter/scripts/timing-spot-check.cjs && node --check starter/scripts/link-check.cjs && node --check starter/scripts/make-gif.cjs",
+    "check:json": "node -e \"JSON.parse(require('fs').readFileSync('package.json','utf8')); JSON.parse(require('fs').readFileSync('starter/app/package.json','utf8')); console.log('json ok')\"",
+    "check:links": "node starter/scripts/link-check.cjs .",
+    "qc:blank": "node starter/scripts/blank-frame-check.cjs frames/sample",
+    "qc:sheet": "node starter/scripts/contact-sheet.cjs frames/sample qc/contact-sheet.html"
+  }
+}

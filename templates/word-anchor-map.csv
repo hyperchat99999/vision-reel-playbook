@@ -1,0 +1,6 @@
+beat_id,local_time,trigger_word,visual_actor,action,source_file_or_note,status
+b02,0.80,opens,pointer,moves to dashboard tab,word timing JSON,draft
+b02,1.40,three,gap cards,brighten first card,word timing JSON,draft
+b02,2.10,gaps,gap cards,brighten remaining cards,word timing JSON,draft
+b03,0.60,recommends,recommendation panel,slides in,word timing JSON,draft
+b03,2.20,why,explainability drawer,opens,word timing JSON,draft

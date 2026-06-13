@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560" role="img" aria-label="Before and after product film fix">
+  <defs>
+    <style>
+      .ink{fill:#0b1f33}.muted{fill:#5b708a}.accent{fill:#1d4fd8}.bad{fill:#b42318}.good{fill:#0f9f83}
+      .title{font:850 30px Inter,Segoe UI,Arial}.small{font:800 13px Inter,Segoe UI,Arial;letter-spacing:.12em}.body{font:500 16px Inter,Segoe UI,Arial}
+    </style>
+    <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0b1f33" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1120" height="560" rx="24" fill="#f5f8fc"/>
+  <g transform="translate(54 58)" filter="url(#sh)">
+    <rect width="480" height="418" rx="18" fill="#fff" stroke="#d9e2f2"/>
+    <text x="28" y="46" class="small bad">BEFORE</text>
+    <text x="28" y="86" class="title ink">Static screen</text>
+    <rect x="28" y="124" width="424" height="204" rx="14" fill="#fbfdff" stroke="#d9e2f2"/>
+    <rect x="58" y="154" width="110" height="62" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="188" y="154" width="110" height="62" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="318" y="154" width="90" height="62" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="58" y="244" width="350" height="14" rx="7" fill="#e8edf5"/>
+    <rect x="58" y="276" width="300" height="14" rx="7" fill="#e8edf5"/>
+    <text x="28" y="374" class="body muted">Narration continues, but nothing acts.</text>
+  </g>
+  <g transform="translate(586 58)" filter="url(#sh)">
+    <rect width="480" height="418" rx="18" fill="#fff" stroke="#1d4fd8" stroke-width="4"/>
+    <text x="28" y="46" class="small good">AFTER</text>
+    <text x="28" y="86" class="title ink">One actor per sentence</text>
+    <rect x="28" y="124" width="424" height="204" rx="14" fill="#fbfdff" stroke="#d9e2f2"/>
+    <rect x="58" y="154" width="110" height="62" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="188" y="154" width="110" height="62" rx="10" fill="#fff" stroke="#1d4fd8" stroke-width="4"/>
+    <rect x="318" y="154" width="90" height="62" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <rect x="58" y="244" width="350" height="46" rx="10" fill="#fff" stroke="#d9e2f2"/>
+    <circle cx="84" cy="267" r="7" fill="#1d4fd8"/>
+    <text x="104" y="273" class="body ink">Evidence rail opens on the word.</text>
+    <text x="28" y="374" class="body muted">The product proves the narration as it is spoken.</text>
+  </g>
+</svg>
+

@@ -1,0 +1,4 @@
+beat_id,title,voiceover,visual_setting,primary_actor,on_screen_change,spoken_numbers,proof_point,notes
+b01,Open problem,"Teams can see activity, but not readiness.","Framework scene","Readiness loop","Loop draws from input to proof","","Business question established",""
+b02,Product setup,"Jordan opens the team view and sees the three gaps that matter.","Real UI dashboard","Gap card","Three cards brighten in sequence","3","Dashboard shows gap count",""
+b03,Decision proof,"The system recommends the next action and records why.","Real UI workflow","Recommendation panel","Pointer opens explainability drawer","","Evidence appears before action",""

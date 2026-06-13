@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "app-native-explainer",
+      "title": "App-native explainer",
+      "description": "A real product interface acts out the narration, sentence by sentence.",
+      "asset": "gallery/cards/app-native-explainer.svg",
+      "pattern": "real-ui"
+    },
+    {
+      "id": "hybrid-trilogy",
+      "title": "Hybrid trilogy",
+      "description": "Generated human setup plus real UI proof across a multi-part story.",
+      "asset": "gallery/cards/hybrid-trilogy.svg",
+      "pattern": "hybrid"
+    },
+    {
+      "id": "guided-recommendation-proof",
+      "title": "Guided recommendation proof film",
+      "description": "A recommendation explains itself from real product evidence.",
+      "asset": "gallery/cards/guided-recommendation-proof.svg",
+      "pattern": "recommendation"
+    }
+  ]
+}

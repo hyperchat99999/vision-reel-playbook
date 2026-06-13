@@ -1,0 +1,26 @@
+name: Showcase submission
+description: Propose a fictional showcase example.
+title: "[Showcase]: "
+labels: ["showcase"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Showcase title
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the fictional product-film pattern.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: The example is fictional and contains no private names, logos, screenshots, prompts, or data.
+          required: true
+

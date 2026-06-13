@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Safety concern
+    url: https://github.com/
+    about: Do not paste secrets or private data into public issues. Open a minimal issue instead.
+
