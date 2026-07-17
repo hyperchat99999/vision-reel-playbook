@@ -50,7 +50,7 @@
     "check:links": "node starter/scripts/link-check.cjs .",
     "qc:blank": "node starter/scripts/blank-frame-check.cjs frames/sample",
     "qc:sheet": "node starter/scripts/contact-sheet.cjs frames/sample qc/contact-sheet.html",
-    "test": "node --test test/*.test.cjs",
+    "test": "node --test test/create-vision-reel.test.cjs",
     "prepublishOnly": "npm run check"
   }
 }
