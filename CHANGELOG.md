@@ -4,6 +4,7 @@
 
 - Added token-free npm trusted-publishing automation for future releases.
 - Added a pull request template, support guide, and dependency update configuration.
+- Grouped routine dependency updates, deferred breaking majors, and removed duplicate branch CI runs.
 - Expanded CI coverage to Node.js 24 and refreshed GitHub Actions versions.
 - Improved npm, community, showcase, and live-site discovery from the README.
 
