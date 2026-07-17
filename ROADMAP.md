@@ -8,6 +8,7 @@ This repo is intentionally a playbook plus starter kit first.
 - Minimal starter kit.
 - Render and QC scripts.
 - Showcase examples and static site.
+- Cross-platform `create-vision-reel` project generator.
 
 ## Next
 
@@ -19,7 +20,6 @@ This repo is intentionally a playbook plus starter kit first.
 
 ## Later
 
-- `create-from-template` command.
 - Stronger schemas for beat sheets and word anchors.
 - Multiple starter themes.
 - Example adapters for Remotion, Motion Canvas, and plain HTML.
