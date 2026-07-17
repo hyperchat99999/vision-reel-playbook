@@ -28,6 +28,18 @@ You do not need to write code. Three steps:
 
 Want to drive it yourself? The [10-minute path](#try-in-10-minutes) and [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM.md) walk through the commands.
 
+## Create A Standalone Project
+
+Create a clean project with the starter, render scripts, safety checks, and templates included:
+
+```bash
+npx create-vision-reel my-film
+cd my-film
+npm run render:sample
+```
+
+Before the npm release is published, run the generator from a repository checkout with `node bin/create-vision-reel.cjs my-film`.
+
 ## The Promise
 
 Most professional work is trapped in decks, demos, screenshots, or long explanations. Vision Reel Playbook gives you a repeatable workflow for making a sharper artifact:

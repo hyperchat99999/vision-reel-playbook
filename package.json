@@ -1,21 +1,56 @@
 {
-  "name": "vision-reel-playbook",
+  "name": "create-vision-reel",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Create a local, deterministic product-film project with rendering and quality checks included.",
+  "license": "MIT",
+  "keywords": [
+    "product-video",
+    "video-rendering",
+    "puppeteer",
+    "ffmpeg",
+    "project-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyperchat99999/vision-reel-playbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hyperchat99999/vision-reel-playbook/issues"
+  },
+  "homepage": "https://github.com/hyperchat99999/vision-reel-playbook#readme",
   "type": "commonjs",
+  "bin": {
+    "create-vision-reel": "bin/create-vision-reel.cjs"
+  },
+  "files": [
+    "bin",
+    "cli-template",
+    "starter/app",
+    "starter/render",
+    "starter/scripts",
+    "starter/sample-data",
+    "templates",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "setup": "npm --prefix starter/app install",
     "dev": "npm --prefix starter/app run dev",
     "render:sample": "node starter/render/render-sample.cjs",
     "gif": "node starter/scripts/make-gif.cjs",
     "gallery:check": "node -e \"const fs=require('fs'); const m=JSON.parse(fs.readFileSync('gallery/manifest.json','utf8')); for (const i of m.items) if(!fs.existsSync(i.asset)) throw new Error('Missing gallery asset '+i.asset); console.log('gallery ok')\"",
-    "check": "npm run scan:ip && npm run check:timing && npm run gallery:check && npm run check:scripts && npm run check:json && npm run check:links",
+    "check": "npm run scan:ip && npm run check:timing && npm run gallery:check && npm run check:scripts && npm run check:json && npm run check:links && npm test",
     "scan:ip": "node starter/scripts/ip-scan.cjs .",
     "check:timing": "node starter/scripts/timing-spot-check.cjs templates/word-anchor-map.csv",
-    "check:scripts": "node --check starter/render/render.cjs && node --check starter/render/render-sample.cjs && node --check starter/scripts/ip-scan.cjs && node --check starter/scripts/blank-frame-check.cjs && node --check starter/scripts/contact-sheet.cjs && node --check starter/scripts/timing-spot-check.cjs && node --check starter/scripts/link-check.cjs && node --check starter/scripts/make-gif.cjs",
+    "check:scripts": "node --check bin/create-vision-reel.cjs && node --check starter/render/render.cjs && node --check starter/render/render-sample.cjs && node --check starter/scripts/ip-scan.cjs && node --check starter/scripts/blank-frame-check.cjs && node --check starter/scripts/contact-sheet.cjs && node --check starter/scripts/timing-spot-check.cjs && node --check starter/scripts/link-check.cjs && node --check starter/scripts/make-gif.cjs",
     "check:json": "node -e \"JSON.parse(require('fs').readFileSync('package.json','utf8')); JSON.parse(require('fs').readFileSync('starter/app/package.json','utf8')); console.log('json ok')\"",
     "check:links": "node starter/scripts/link-check.cjs .",
     "qc:blank": "node starter/scripts/blank-frame-check.cjs frames/sample",
-    "qc:sheet": "node starter/scripts/contact-sheet.cjs frames/sample qc/contact-sheet.html"
+    "qc:sheet": "node starter/scripts/contact-sheet.cjs frames/sample qc/contact-sheet.html",
+    "test": "node --test test/*.test.cjs",
+    "prepublishOnly": "npm run check"
   }
 }

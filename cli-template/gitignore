@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+.cache/
+frames/
+rendered/
+out/
+qc/
+assets/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.env
+.DS_Store
+Thumbs.db
