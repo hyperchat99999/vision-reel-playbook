@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create polished, deterministic product films from real interfaces with a public-safe open-source playbook and starter kit." />
     <title>Vision Reel Playbook</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -10,12 +11,14 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Vision Reel Playbook</p>
-          <h1>Vision Reel Playbook</h1>
-          <p class="lede">A public-safe workflow for turning product work and ideas into polished, word-synced concept films.</p>
+          <p class="eyebrow">Open-source playbook + project generator</p>
+          <h1>Make the work explain itself.</h1>
+          <p class="lede">Turn a real product, workflow, or idea into a polished, word-synced film where every claim is proved on screen.</p>
+          <pre class="install"><code>npx create-vision-reel@latest my-film</code></pre>
           <div class="actions">
-            <a href="../MAKE_YOUR_FIRST_FILM.md">Try in 10 minutes</a>
-            <a href="../SHOWCASE.md" class="secondary">View showcase</a>
+            <a href="https://github.com/hyperchat99999/vision-reel-playbook/blob/main/MAKE_YOUR_FIRST_FILM.md">Try in 10 minutes</a>
+            <a href="https://github.com/hyperchat99999/vision-reel-playbook" class="secondary">View on GitHub</a>
+            <a href="https://www.npmjs.com/package/create-vision-reel" class="secondary">npm package</a>
           </div>
         </div>
       </section>
@@ -39,13 +42,22 @@
       </section>
 
       <section class="showcase">
+        <h2>See the included starter render</h2>
+        <p class="section-copy">This sample is rendered end-to-end from the included fictional interface, deterministic timeline, browser capture, and FFmpeg pipeline.</p>
+        <video class="sample-film" controls muted playsinline poster="../assets/sample-still.png">
+          <source src="../assets/sample-clean.mp4" type="video/mp4" />
+          Your browser does not support the video element. <a href="../assets/sample-clean.mp4">Download the sample film.</a>
+        </video>
         <h2>Showcase patterns</h2>
-        <p class="section-copy">Start with the rendered sample, then adapt one of the public-safe patterns below.</p>
-        <img class="sample-sheet" src="../assets/sample-contact-sheet.jpg" alt="Rendered starter contact sheet" />
+        <p class="section-copy">Adapt one of the public-safe patterns below, then submit your result to the community showcase.</p>
         <div class="cards">
           <img src="../gallery/cards/app-native-explainer.svg" alt="App-native explainer" />
           <img src="../gallery/cards/hybrid-trilogy.svg" alt="Hybrid trilogy" />
           <img src="../gallery/cards/guided-recommendation-proof.svg" alt="Guided recommendation proof film" />
+        </div>
+        <div class="actions showcase-actions">
+          <a href="https://github.com/hyperchat99999/vision-reel-playbook/blob/main/SHOWCASE.md">Explore the showcase</a>
+          <a href="https://github.com/hyperchat99999/vision-reel-playbook/issues/new?template=showcase_submission.yml" class="secondary">Submit your film</a>
         </div>
       </section>
     </main>

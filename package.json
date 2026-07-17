@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/hyperchat99999/vision-reel-playbook/issues"
   },
-  "homepage": "https://github.com/hyperchat99999/vision-reel-playbook#readme",
+  "homepage": "https://hyperchat99999.github.io/vision-reel-playbook/",
   "type": "commonjs",
   "bin": {
     "create-vision-reel": "bin/create-vision-reel.cjs"
