@@ -1,6 +1,9 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Ask a question
+    url: https://github.com/hyperchat99999/vision-reel-playbook/discussions
+    about: Use Discussions for setup help, production questions, and ideas that are not yet scoped issues.
   - name: Safety concern
-    url: https://github.com/
-    about: Do not paste secrets or private data into public issues. Open a minimal issue instead.
+    url: https://github.com/hyperchat99999/vision-reel-playbook/security/policy
+    about: Read the security policy before reporting anything that may contain sensitive material.
 

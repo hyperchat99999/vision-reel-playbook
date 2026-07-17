@@ -33,7 +33,7 @@ main {
 }
 
 .hero-copy {
-  max-width: 620px;
+  max-width: 760px;
   color: #fff;
 }
 
@@ -79,6 +79,19 @@ a.secondary {
   background: #fff;
   color: var(--accent);
   border: 1px solid var(--line);
+}
+
+.install {
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 28px 0 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  color: #dce8ff;
+  font-size: 15px;
 }
 
 .showcase img {
@@ -134,10 +147,17 @@ article p {
   line-height: 1.5;
 }
 
-.sample-sheet {
+.sample-film {
+  width: 100%;
+  display: block;
   border: 1px solid var(--line);
   border-radius: 8px;
   margin: 18px 0 18px;
+  background: #071523;
+}
+
+.showcase-actions {
+  margin-top: 24px;
 }
 
 @media (max-width: 900px) {

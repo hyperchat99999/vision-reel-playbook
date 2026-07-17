@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added token-free npm trusted-publishing automation for future releases.
+- Added a pull request template, support guide, and dependency update configuration.
+- Expanded CI coverage to Node.js 24 and refreshed GitHub Actions versions.
+- Improved npm, community, showcase, and live-site discovery from the README.
+
 ## 0.2.0
 
 - Added the `create-vision-reel` CLI for generating standalone film projects.

@@ -1,6 +1,9 @@
 # Vision Reel Playbook
 
 [![CI](https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/create-vision-reel.svg)](https://www.npmjs.com/package/create-vision-reel)
+[![npm downloads](https://img.shields.io/npm/dm/create-vision-reel.svg)](https://www.npmjs.com/package/create-vision-reel)
+[![GitHub release](https://img.shields.io/github/v/release/hyperchat99999/vision-reel-playbook)](https://github.com/hyperchat99999/vision-reel-playbook/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Node 20+](https://img.shields.io/badge/Node-20%2B-0b1f33)](starter/README.md)
 [![Public safe](https://img.shields.io/badge/Public--safe-IP%20scan-1d4fd8)](docs/09-ip-safety.md)
@@ -30,15 +33,13 @@ Want to drive it yourself? The [10-minute path](#try-in-10-minutes) and [`MAKE_Y
 
 ## Create A Standalone Project
 
-Create a clean project with the starter, render scripts, safety checks, and templates included:
+Create a clean project with the starter, render scripts, safety checks, and templates included. The generator is published as [`create-vision-reel`](https://www.npmjs.com/package/create-vision-reel):
 
 ```bash
-npx create-vision-reel my-film
+npx create-vision-reel@latest my-film
 cd my-film
 npm run render:sample
 ```
-
-Before the npm release is published, run the generator from a repository checkout with `node bin/create-vision-reel.cjs my-film`.
 
 ## The Promise
 
@@ -127,6 +128,15 @@ The browser → frames → FFmpeg plumbing here is deliberately boring and swapp
 - [`assets/sample-clean.mp4`](assets/sample-clean.mp4) is the rendered starter demo.
 - [`assets/sample-contact-sheet.jpg`](assets/sample-contact-sheet.jpg) is the visual QC sheet.
 - [`examples/worked-example/`](examples/worked-example/) shows a complete fictional mini-production.
+
+Made something with the playbook? Use the [showcase submission form](https://github.com/hyperchat99999/vision-reel-playbook/issues/new?template=showcase_submission.yml) to share a public-safe result.
+
+## Community And Maintenance
+
+- Read the [roadmap](ROADMAP.md) and [open issues](https://github.com/hyperchat99999/vision-reel-playbook/issues) before proposing work.
+- Use [GitHub Discussions](https://github.com/hyperchat99999/vision-reel-playbook/discussions) for questions and production ideas.
+- Follow [CONTRIBUTING.md](CONTRIBUTING.md) for local checks and public-safety rules.
+- See [SUPPORT.md](SUPPORT.md) for help and [SECURITY.md](SECURITY.md) for sensitive reports.
 
 ## Repo Map
 
