@@ -61,7 +61,7 @@ Or drop `voice.mp3` (or `.wav` / `.m4a`) into `starter/sample-assets/` and `npm 
 
 ## Helping someone shape the idea first
 
-If the user does not yet know what their film should be, point them to [`prompts/idea-to-film-consultant.md`](prompts/idea-to-film-consultant.md) (or run it together): a discovery interview that diagnoses the communication job, recommends `scroll-story`, `launch-film`, or `vox-collage`, and produces a filled brief, beat sheet, evidence treatment, and word anchors you can then build from.
+If the user does not yet know what their film should be, point them to [`prompts/idea-to-film-consultant.md`](prompts/idea-to-film-consultant.md) (or run it together): a discovery interview that diagnoses the communication job, recommends `scroll-story`, `launch-film`, or `vox-collage`, makes an explicit use / do not use / selected-beats-only decision for the hand-drawn treatment, and produces a filled brief, beat sheet, evidence treatment, and word anchors you can then build from.
 
 ## IP safety (important)
 

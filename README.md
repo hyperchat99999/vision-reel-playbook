@@ -67,7 +67,7 @@ This is an optional **treatment**, not a fourth communication format. Apply it t
 </p>
 
 > [!TIP]
-> **A fuzzy idea is enough.** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage, explains why the runner-up lost, and produces a buildable brief, beat sheet, evidence treatment, and word-anchor plan—in plain language.
+> **A fuzzy idea is enough.** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage, decides whether the hand-drawn treatment strengthens the story, explains the tradeoffs, and produces a buildable brief, beat sheet, evidence treatment, and word-anchor plan—in plain language.
 
 ## From idea to finished film
 
@@ -241,7 +241,7 @@ examples/
   Worked examples and before/after fixes.
 
 prompts/
-  The Idea-to-Film discovery consultant: diagnoses the communication job, recommends one of three formats, and creates a buildable plan.
+  The Idea-to-Film discovery consultant: diagnoses the communication job, recommends one of three formats, makes an explicit hand-drawn-treatment decision, and creates a buildable plan.
 
 gallery/
   Public-safe showcase cards and metadata.

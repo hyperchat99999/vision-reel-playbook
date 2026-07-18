@@ -6,6 +6,7 @@ const { spawnSync } = require("node:child_process");
 const test = require("node:test");
 
 const cli = path.resolve(__dirname, "..", "bin", "create-vision-reel.cjs");
+const consultant = path.resolve(__dirname, "..", "prompts", "idea-to-film-consultant.md");
 
 function runCli(args, cwd) {
   return spawnSync(process.execPath, [cli, ...args], { cwd, encoding: "utf8" });
@@ -20,6 +21,13 @@ function runNpm(args, cwd) {
   }
   return spawnSync("npm", args, { cwd, encoding: "utf8" });
 }
+
+test("discovery consultant separates format from hand-drawn treatment", () => {
+  const prompt = fs.readFileSync(consultant, "utf8");
+  assert.match(prompt, /not a fourth signature format/i);
+  assert.match(prompt, /use \/ do not use \/ selected beats only/i);
+  assert.match(prompt, /Never let an illustration impersonate real product evidence/i);
+});
 
 test("creates a self-contained project without installing dependencies", (t) => {
   const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), "create-vision-reel-"));
