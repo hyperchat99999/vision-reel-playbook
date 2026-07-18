@@ -1,8 +1,10 @@
 # Film Types
 
-This playbook supports five main formats.
+This playbook ships three signature formats. App-native proof and hybrid context are evidence treatments that can be used inside those formats; they are not separate preset choices.
 
-## App-Native Explainer
+If you are starting from a fuzzy idea, run the [Idea-to-Film discovery consultant](../prompts/idea-to-film-consultant.md). It diagnoses the communication job before recommending a format.
+
+## Evidence Treatment: App-Native Proof
 
 The app is the film set.
 
@@ -20,9 +22,9 @@ Typical structure:
 4. Proof loop: the decision creates a record, badge, plan, audit trail, or leader view.
 5. Close: restate the loop and business outcome.
 
-## Hybrid Product Story
+## Evidence Treatment: Hybrid Context
 
-Human context plus real UI.
+Human context plus real UI or structured proof.
 
 Use when:
 
@@ -38,7 +40,7 @@ Typical structure:
 4. Optional return to character context.
 5. Product proof and close.
 
-## Cinematic Scroll Story
+## Signature Format 1: Cinematic Scroll Story
 
 A portrait film that turns scrolling into a deliberate camera move through stacked chapters.
 
@@ -56,7 +58,7 @@ Typical structure:
 4. A focused UI proof moment.
 5. A decisive product-name ending.
 
-## Editorial Launch Film
+## Signature Format 2: Editorial Launch Film
 
 A landscape launch cut built from bold typography, graphic contrast, and a product proof beat.
 
@@ -74,7 +76,7 @@ Typical structure:
 4. One original UI sequence as evidence.
 5. A restrained logo and call-to-action close.
 
-## VOX Collage Explainer
+## Signature Format 3: VOX Collage Explainer
 
 A portrait editorial collage that makes a concrete problem, mechanism, and payoff visible through paper actors.
 

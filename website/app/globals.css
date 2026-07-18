@@ -109,6 +109,7 @@ h1 em, .closing h2 em { color: var(--coral); font-family: var(--serif); font-wei
 .workflow { display: grid; grid-template-columns: .82fr 1.18fr; gap: 10vw; align-items: start; max-width: 1260px; margin: 0 auto; padding: 130px 24px; }
 .workflowCopy { position: sticky; top: 40px; }.workflowCopy > p:not(.kicker) { max-width: 520px; margin: 28px 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
 .textLink { display: inline-flex; align-items: center; gap: 8px; padding-bottom: 6px; border-bottom: 1px solid currentColor; font-size: 13px; font-weight: 850; }.textLink span { color: var(--blue); }
+.consultantLink { margin: 0 24px 14px 0; color: var(--blue); }
 .workflowSteps { margin: 0; padding: 0; list-style: none; counter-reset: steps; border-top: 1px solid var(--line); }
 .workflowSteps li { display: grid; grid-template-columns: 72px 1fr; gap: 18px; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
 .workflowSteps li > span { color: var(--blue); font: 11px var(--mono); }.workflowSteps div { display: grid; gap: 6px; }

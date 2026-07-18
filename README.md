@@ -8,37 +8,48 @@
 [![Node 20+](https://img.shields.io/badge/Node-20%2B-0b1f33)](starter/README.md)
 [![Public safe](https://img.shields.io/badge/Public--safe-IP%20scan-1d4fd8)](docs/09-ip-safety.md)
 [![Starter included](https://img.shields.io/badge/Starter-included-0f9f83)](starter/README.md)
+[![Live showcase](https://img.shields.io/badge/Live-showcase-c9ff5d)](https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site)
 
-**Vision Reel Playbook turns a real product, workflow, strategy, or prototype into a short film where the work itself acts out the story and proves each claim on screen.** It pairs a repeatable method with a working starter kit and four reusable visual presets, so an idea that would normally live in a deck or a screen recording becomes something people watch, follow, and remember.
+**Vision Reel Playbook turns a real product, workflow, strategy, or prototype into the right kind of short film for the communication problem.** It pairs a repeatable discovery method with three signature formats and a working starter kit, so an idea that would normally live in a deck or screen recording becomes something people watch, follow, and remember.
 
-You write the voiceover first, map each sentence to one thing on screen, and your real interface is captured frame-by-frame, timed to your words, and checked for blank frames, broken timing, or leaked private data. The playbook is yours to read; the starter kit runs locally and renders a real-UI film with no paid services — drive it yourself, hand it to a developer, or use a development assistant to run it with you (see [`AGENTS.md`](AGENTS.md)). A voiceover or generated character footage are optional add-ons that may use paid external services.
+You start with the audience's question, choose a **cinematic scroll story**, **editorial launch film**, or **VOX collage explainer**, then map each sentence to one visible actor. The browser captures every frame deterministically and checks the result for blank frames, broken timing, or leaked private data. The local path uses no paid generation service; voiceover and generated context remain optional production upgrades.
 
-> **See it move.** The 24-second sample below was rendered end-to-end by the included starter — real UI, word-synced timing, browser-captured frames, FFmpeg stitch. The render pipeline itself needs **no paid APIs**.
+## Start With The Communication Problem
+
+Do not choose a format because it looks fashionable. Choose the one that solves the viewer's actual problem:
+
+| If the audience needs to… | Start with | Why it fits |
+| --- | --- | --- |
+| Follow a connected journey, workflow, or system | [`scroll-story`](assets/scroll-story-demo.mp4) | Portrait depth and chapter continuity make sequence itself become the proof. |
+| Care that a product, feature, or project now exists | [`launch-film`](assets/launch-film-demo.mp4) | Landscape kinetic type creates announcement energy, then one product beat earns the claim. |
+| Understand an abstract problem, mechanism, or concept | [`vox-collage`](assets/vox-collage-demo.mp4) | Concrete paper actors and assembled evidence turn explanation into a visible before/after. |
+
+**Not sure which job you have?** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It interviews you in plain language, recommends one of the three formats with a reason and alternate, then produces the brief, beat sheet, evidence treatment, and word-anchor plan. No coding needed.
+
+> **Legacy starter proof.** The backward-compatible `classic` sample below demonstrates the shared render contract end-to-end: real UI, word-synced timing, browser-captured frames, and FFmpeg assembly. The three signature films are featured in [Signature Presets](#signature-presets).
 
 ![Sample film rendered by the Vision Reel starter kit](assets/sample.gif)
 
 <sub>The GIF above is a silent preview. The [full clean cut (`assets/sample-clean.mp4`)](assets/sample-clean.mp4) plays with a sample voiceover from a generic voice-generation service. Audio is optional; films render fine silent. Regenerate the GIF with `npm run gif`.</sub>
 
-**Not sure what to film yet?** Start with the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md) — paste it into your preferred chat assistant or use it as a planning instruction file. It interviews you into a filled brief, beat sheet, and word-anchor plan. No coding needed.
-
 ## Quickstart for Non-Coders
 
 You do not need to write code. Three steps:
 
-1. **Shape the idea.** Open the [discovery consultant](prompts/idea-to-film-consultant.md) in your preferred chat assistant. It interviews you and hands back a filled brief, a beat sheet, and word-anchor suggestions.
-2. **Hand it off to build.** Give those three artifacts and [`AGENTS.md`](AGENTS.md) to a developer or development assistant, and ask them to set up the kit and render your film. `AGENTS.md` spells out every command and guardrail.
-3. **Review and share.** You get a clean 1080p film with built-in quality checks for blank frames, timing, and private-data leaks. Add a voiceover whenever you are ready.
+1. **Diagnose the idea.** Open the [discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage based on the audience's communication problem—not your technical knowledge.
+2. **Hand off a buildable plan.** Give its brief, beat sheet, format recommendation, and word anchors to a developer or development assistant alongside [`AGENTS.md`](AGENTS.md).
+3. **Review and share.** You get a clean format-native MP4 with built-in checks for blank frames, timing, and private-data leaks. Add voiceover or generated context only when it improves the explanation.
 
 Want to drive it yourself? The [10-minute path](#try-in-10-minutes) and [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM.md) walk through the commands.
 
 ## Create A Standalone Project
 
-Create a clean project with the starter, render scripts, safety checks, and templates included. The generator is published as [`create-vision-reel`](https://www.npmjs.com/package/create-vision-reel):
+Create a clean project with the starter, render scripts, safety checks, and templates included. The generator is published as [`create-vision-reel`](https://www.npmjs.com/package/create-vision-reel). Pick the format recommended by the consultant:
 
 ```bash
-npx create-vision-reel@latest my-film
+npx create-vision-reel@latest my-film --type scroll-story
 cd my-film
-npm run render:sample
+npm run render:scroll-story
 ```
 
 Choose a signature preset when you create the project:
@@ -49,7 +60,7 @@ npx create-vision-reel@latest my-launch-film --type launch-film
 npx create-vision-reel@latest my-collage-film --type vox-collage
 ```
 
-The original `classic` preset remains the default, so existing commands and projects keep working.
+The original `classic` preset remains the default only for backward compatibility. New films should deliberately choose one of the three signature formats.
 
 All finished public masters are also collected in [`videos/`](videos/) for convenient review and download. The existing `assets/` paths remain canonical so gallery and renderer links stay backward compatible.
 
@@ -193,7 +204,7 @@ examples/
   Worked examples and before/after fixes.
 
 prompts/
-  The Idea-to-Film discovery consultant: a paste-ready prompt that turns a fuzzy idea into a brief, beat sheet, and word anchors.
+  The Idea-to-Film discovery consultant: diagnoses the communication job, recommends one of three formats, and creates a buildable plan.
 
 gallery/
   Public-safe showcase cards and metadata.
@@ -202,7 +213,10 @@ design-references/
   Generated art-direction references and their provenance notes; not runtime assets.
 
 site/
-  Static GitHub Pages landing page.
+  Lightweight static landing page retained for GitHub Pages compatibility.
+
+website/
+  The production Sites showcase with playable masters and the no-cost workflow.
 ```
 
 ## Build Your Own Film
@@ -221,7 +235,7 @@ The starter app includes:
 
 - A fictional dashboard.
 - A learner/workflow screen.
-- Four presets: classic, cinematic scroll story, editorial launch film, and VOX collage explainer.
+- Three signature presets—cinematic scroll story, editorial launch film, and VOX collage explainer—plus the backward-compatible classic demo.
 - A `video.html` entry that exposes `window.__filmSetT(t)`.
 - Deterministic enter, hold, and exit choreography for every signature scene.
 - A renderer that starts the app, captures browser frames, and stitches a sample video.

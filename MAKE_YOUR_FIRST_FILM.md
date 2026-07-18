@@ -1,6 +1,6 @@
 # Make Your First Product Film
 
-This is the fastest path through the repo. It turns the starter into a tiny product film.
+This is the fastest path through the shared render contract using the backward-compatible classic demo. For a new production, run the discovery consultant first and create the recommended scroll, launch, or collage preset.
 
 Target output: a 20 to 30 second clean MP4 showing a fictional product UI acting out a short narration.
 
@@ -18,7 +18,7 @@ Confirm it worked: open a terminal in this repo folder and run `node -v` (you sh
 
 **Never used a terminal?** You don't have to run these commands yourself — ask a developer or development assistant to set up and render the sample. See [`AGENTS.md`](AGENTS.md).
 
-> **Not sure what your film should be about?** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md) first — paste it into your preferred chat assistant and it interviews you into the brief and beats below.
+> **Not sure what your film should be—or which format fits?** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md) first. It diagnoses the communication problem, recommends one of the three signature formats, and interviews you into the brief and beats below.
 
 ## 1. Start With One Business Question
 

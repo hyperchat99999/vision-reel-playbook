@@ -20,13 +20,25 @@ After watching, the viewer should believe:
 2.
 3.
 
-## Film Type
+## Signature Format
 
 Choose one:
 
-- App-native explainer.
-- Hybrid product story.
-- Other:
+- Cinematic scroll story (`scroll-story`).
+- Editorial launch film (`launch-film`).
+- VOX collage explainer (`vox-collage`).
+
+Recommendation reasoning:
+
+Alternate considered and why it lost:
+
+## Evidence Treatment
+
+Choose the ingredients that earn trust inside the selected format:
+
+- Real UI proof.
+- Code-native graphic proof.
+- Optional generated context (never fake product proof).
 
 ## Anchor Object
 

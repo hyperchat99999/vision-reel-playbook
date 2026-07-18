@@ -64,7 +64,7 @@ export default function Home() {
           <a href="#workflow">Workflow</a>
           <a href={`${repo}/blob/main/docs/README.md`}>Docs</a>
         </div>
-        <a className="navCta" href={repo}>Star on GitHub <span aria-hidden="true">↗</span></a>
+        <a className="navCta" href={`${repo}/blob/main/prompts/idea-to-film-consultant.md`}>Find your format <span aria-hidden="true">↗</span></a>
       </nav>
 
       <section className="hero" id="top">
@@ -76,7 +76,7 @@ export default function Home() {
             Turn a real interface into a polished, deterministic film where every claim is proved on screen.
           </p>
           <div className="heroActions">
-            <a className="button buttonPrimary" href={`${repo}/blob/main/MAKE_YOUR_FIRST_FILM.md`}>Make your first film <span>↗</span></a>
+            <a className="button buttonPrimary" href={`${repo}/blob/main/prompts/idea-to-film-consultant.md`}>Find your format <span>↗</span></a>
             <a className="button buttonGhost" href="#films"><span className="play">▶</span> Watch the formats</a>
           </div>
           <div className="install" aria-label="Install command">
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       <section className="proofStrip" aria-label="Project facts">
-        <div><strong>04</strong><span>signature<br />formats</span></div>
+        <div><strong>03</strong><span>signature<br />formats</span></div>
         <div><strong>$0</strong><span>default<br />generation cost</span></div>
         <div><strong>1:1</strong><span>frame-perfect<br />reproducibility</span></div>
         <p>Built for creators who need the product to explain itself—clearly, quickly, and without a black-box render.</p>
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="films" id="films" aria-labelledby="films-title">
         <div className="filmsHead">
           <div><p className="kicker light"><span /> Signature presets</p><h2 id="films-title">Choose a way<br />to make it move.</h2></div>
-          <p>Four production-ready starting points. Same deterministic timeline. Different editorial grammar.</p>
+          <p>Three code-native formats selected by communication job, plus one optional generated-media production pass.</p>
         </div>
         <div className="filmGrid">
           {films.map((film) => (
@@ -145,11 +145,12 @@ export default function Home() {
         <div className="workflowCopy">
           <p className="kicker dark"><span /> The no-cost route</p>
           <h2 id="workflow-title">Your browser is the studio.</h2>
-          <p>React draws the scenes. A deterministic timeline directs the action. The local browser captures the frames. FFmpeg finishes the master—with original procedural music included.</p>
+          <p>First diagnose the communication problem; then React draws the chosen format, a deterministic timeline directs the action, the local browser captures the frames, and FFmpeg finishes the master—with original procedural music included.</p>
+          <a className="textLink consultantLink" href={`${repo}/blob/main/prompts/idea-to-film-consultant.md`}>Run the three-format discovery consultant <span>↗</span></a>
           <a className="textLink" href={`${repo}/blob/main/docs/19-no-cost-video-generation.md`}>Read the complete workflow <span>↗</span></a>
         </div>
         <ol className="workflowSteps">
-          <li><span>01</span><div><strong>Choose a preset</strong><small>Scroll, launch, collage, or classic proof loop.</small></div></li>
+          <li><span>01</span><div><strong>Diagnose the job</strong><small>Choose scroll for continuity, launch for announcement, or collage for explanation.</small></div></li>
           <li><span>02</span><div><strong>Replace the story</strong><small>Edit copy, UI states, evidence, palette, and timing.</small></div></li>
           <li><span>03</span><div><strong>Direct in the browser</strong><small>Scrub every beat before spending time on a render.</small></div></li>
           <li><span>04</span><div><strong>Render locally</strong><small>Capture exact frames and synthesize the original score.</small></div></li>

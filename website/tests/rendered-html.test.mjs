@@ -24,6 +24,9 @@ test("server-renders the complete Vision Reel showcase", async () => {
   assert.match(html, /Cinematic scroll story/);
   assert.match(html, /Editorial launch film/);
   assert.match(html, /VOX collage explainer/);
+  assert.match(html, /Find your format/);
+  assert.match(html, /three-format discovery consultant/);
+  assert.match(html, />03<\/strong>/);
   assert.match(html, /The no-cost route/);
   assert.match(html, /npx create-vision-reel@latest my-film/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);

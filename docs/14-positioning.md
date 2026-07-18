@@ -8,12 +8,12 @@ This repo exists because product videos often fall into two weak patterns:
 The middle path is stronger:
 
 ```text
-Real product UI + film grammar + word-synced timing + rigorous QC.
+Visible evidence + the right film grammar + deterministic timing + rigorous QC.
 ```
 
 ## One-Line Description
 
-A playbook for making product explainer films where the real interface acts out the narration.
+A playbook for choosing and building the right evidence-led film: cinematic scroll story, editorial launch film, or VOX collage explainer.
 
 ## Longer Description
 
@@ -30,7 +30,8 @@ Vision Reel Playbook helps teams turn real interfaces, workflows, and ideas into
 
 ## What Makes It Distinct
 
-- The product is the proof.
+- The communication problem determines the format.
+- The proof acts: real UI, exact graphics, or meaningful visual metaphor.
 - Every sentence gets one actor.
 - Timing is anchored to actual voiceover.
 - Generated media supports the story while the real UI stays the proof.

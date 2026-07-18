@@ -20,9 +20,17 @@ After watching, the viewer should believe:
 2. The recommendation is grounded in evidence.
 3. The output becomes a visible plan and record.
 
-## Film Type
+## Signature Format
 
-App-native explainer.
+Cinematic scroll story (`scroll-story`).
+
+Recommendation reasoning: the audience must follow one capability gap through evidence, recommendation, and recorded outcome; continuity is the proof.
+
+Alternate considered and why it lost: an editorial launch film would add announcement energy but compress the connected decision path.
+
+## Evidence Treatment
+
+Real UI proof with code-native framework graphics.
 
 ## Anchor Object
 
