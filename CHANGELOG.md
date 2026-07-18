@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.4.0 - 2026-07-19
+
 - Added an optional `handdraw-story` treatment with aligned ink-and-color reveals, creator-focused causal storytelling, deterministic rendering, CLI support, validation, public demo assets, and upstream attribution.
 - Replaced the hand-drawn placeholders with five original, character-consistent editorial illustrations and locally derived aligned ink layers.
 - Re-scored the scroll, collage, and hand-drawn showcase masters with a crisp, high-energy ElevenLabs Music v2 suite, retained the launch film's better-fitting original score, and upgraded the no-cost procedural fallback with tighter transients and brighter rhythmic motifs.

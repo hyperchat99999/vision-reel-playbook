@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site">
+  <a href="https://hyperchat99999.github.io/vision-reel-playbook/">
     <img src="website/public/og.png" alt="Vision Reel — direct the product" width="100%" />
   </a>
 </p>
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site"><strong>Watch the showcase</strong></a>
+  <a href="https://hyperchat99999.github.io/vision-reel-playbook/"><strong>Watch the showcase</strong></a>
   · <a href="prompts/idea-to-film-consultant.md">Find your format</a>
   · <a href="MAKE_YOUR_FIRST_FILM.md">Make your first film</a>
   · <a href="docs/README.md">Read the playbook</a>
