@@ -14,7 +14,7 @@ function parseArgs(argv) {
 
 const options = parseArgs(process.argv.slice(2));
 const preset = options.preset || "launch-film";
-const durations = { "scroll-story": 18, "launch-film": 12, "vox-collage": 15 };
+const durations = { "scroll-story": 18, "launch-film": 12, "vox-collage": 15, "handdraw-story": 20 };
 const duration = durations[preset];
 
 if (!duration) {
@@ -126,6 +126,16 @@ function addHat(start, amplitude = 0.035, pan = 0) {
   addNoiseHit(start, 0.065, amplitude, 23, pan);
 }
 
+function addTick(start, amplitude = 0.035, pan = 0) {
+  addTone({ frequency: 1480, start, length: 0.045, amplitude, pan, harmonic: 0.38, attack: 0.001, release: 0.038 });
+  addNoiseHit(start, 0.035, amplitude * 0.42, 67, pan);
+}
+
+function addPluck(start, frequency, amplitude = 0.045, pan = 0) {
+  addTone({ frequency, start, length: 0.19, amplitude, pan, harmonic: 0.28, attack: 0.002, release: 0.17 });
+  addTone({ frequency: frequency * 2.01, start: start + 0.006, length: 0.095, amplitude: amplitude * 0.27, pan: -pan, harmonic: 0.08, attack: 0.001, release: 0.085 });
+}
+
 function addBass(start, frequency, length = 0.4, amplitude = 0.105) {
   addTone({ frequency, start, length, amplitude, pan: 0, harmonic: 0.28, attack: 0.006, release: Math.min(0.22, length * 0.55) });
 }
@@ -153,6 +163,7 @@ function addRhythm({ bpm, bassNotes, chapterTimes = [], intensity = 1 }) {
     const eighthIndex = Math.round(time / eighth);
     const beatIndex = Math.floor(eighthIndex / 2);
     addHat(time, (eighthIndex % 2 === 0 ? 0.036 : 0.025) * intensity, eighthIndex % 4 < 2 ? -0.24 : 0.24);
+    if (eighthIndex % 2 === 1) addTick(time, 0.024 * intensity, eighthIndex % 4 === 1 ? -0.32 : 0.32);
     if (eighthIndex % 2 === 0) {
       addKick(time, (beatIndex % 4 === 0 ? 0.35 : 0.27) * intensity);
       if (beatIndex % 4 === 1 || beatIndex % 4 === 3) addSnare(time, 0.12 * intensity);
@@ -167,23 +178,31 @@ function addRhythm({ bpm, bassNotes, chapterTimes = [], intensity = 1 }) {
 }
 
 if (preset === "scroll-story") {
-  addBed([73.42, 110, 146.83, 220], 0.12);
-  addRhythm({ bpm: 120, bassNotes: [55, 55, 65.41, 73.42, 55, 82.41, 73.42, 65.41], chapterTimes: [2.95, 6.65, 10.95, 14.2], intensity: 1 });
-  for (let time = 0.25, step = 0; time < duration - 0.4; time += 0.5, step += 1) {
+  addBed([73.42, 110, 146.83, 220], 0.038);
+  addRhythm({ bpm: 128, bassNotes: [55, 55, 65.41, 73.42, 55, 82.41, 73.42, 65.41], chapterTimes: [2.95, 6.65, 10.95, 14.2], intensity: 1.06 });
+  for (let time = 0.234, step = 0; time < duration - 0.3; time += 0.46875, step += 1) {
     const notes = [293.66, 369.99, 440, 587.33];
-    addTone({ frequency: notes[step % notes.length], start: time, length: 0.17, amplitude: 0.026, pan: step % 2 === 0 ? -0.35 : 0.35, harmonic: 0.18, attack: 0.004, release: 0.14 });
+    addPluck(time, notes[step % notes.length], 0.035, step % 2 === 0 ? -0.38 : 0.38);
   }
 } else if (preset === "launch-film") {
-  addBed([110, 146.83, 220, 293.66], 0.075);
+  addBed([110, 146.83, 220, 293.66], 0.03);
+  addRhythm({ bpm: 132, bassNotes: [55, 73.42, 82.41, 73.42, 55, 65.41, 73.42, 82.41], chapterTimes: [2, 4, 7, 10], intensity: 1.08 });
   [0, 2, 4, 7, 10].forEach((time, index) => addPulse(time, index === 4 ? 73.42 : 62, 0.23));
-  for (let time = 4.08; time < 6.9; time += 0.68) addPulse(time, 92.5, 0.11);
+  for (let time = 0.227, step = 0; time < duration - 0.2; time += 0.4545, step += 1) addPluck(time, [293.66, 369.99, 440, 587.33][step % 4], 0.03, step % 2 ? 0.36 : -0.36);
   addChime(10.12, [293.66, 369.99, 440, 587.33], 0.085);
+} else if (preset === "handdraw-story") {
+  addBed([65.41, 98, 130.81, 196], 0.032);
+  addRhythm({ bpm: 118, bassNotes: [65.41, 73.42, 82.41, 73.42, 65.41, 82.41, 98, 82.41], chapterTimes: [4, 8, 12, 16, 19.25], intensity: 0.98 });
+  for (let time = 0.254, step = 0; time < duration - 0.25; time += 0.5085, step += 1) {
+    const notes = [261.63, 329.63, 392, 493.88];
+    addPluck(time, notes[step % notes.length], 0.032, step % 2 === 0 ? -0.3 : 0.3);
+  }
 } else {
-  addBed([65.41, 98, 130.81, 196], 0.105);
-  addRhythm({ bpm: 120, bassNotes: [55, 65.41, 73.42, 65.41, 55, 73.42, 82.41, 73.42], chapterTimes: [5, 10, 14.15], intensity: 0.92 });
-  for (let time = 0.25, step = 0; time < duration - 0.25; time += 0.5, step += 1) {
+  addBed([65.41, 98, 130.81, 196], 0.034);
+  addRhythm({ bpm: 126, bassNotes: [55, 65.41, 73.42, 65.41, 55, 73.42, 82.41, 73.42], chapterTimes: [5, 10, 14.15], intensity: 1.02 });
+  for (let time = 0.238, step = 0; time < duration - 0.2; time += 0.4762, step += 1) {
     const notes = [261.63, 329.63, 392, 523.25];
-    addTone({ frequency: notes[step % notes.length], start: time, length: 0.15, amplitude: 0.024, pan: step % 2 === 0 ? -0.42 : 0.42, harmonic: 0.2, attack: 0.003, release: 0.13 });
+    addPluck(time, notes[step % notes.length], 0.033, step % 2 === 0 ? -0.42 : 0.42);
   }
 }
 
@@ -210,7 +229,7 @@ for (let index = 0; index < mix.length; index += 1) {
   mastered[index] = sample;
   peak = Math.max(peak, Math.abs(sample));
 }
-const targetPeak = preset === "vox-collage" ? 0.7 : 0.86;
+const targetPeak = 0.88;
 const gain = peak > 0 ? targetPeak / peak : 1;
 const dataSize = frameCount * channels * 2;
 const wav = Buffer.alloc(44 + dataSize);

@@ -34,6 +34,7 @@ http://localhost:5173/video.html?render=1
 http://localhost:5173/video.html?preset=scroll-story
 http://localhost:5173/video.html?preset=launch-film
 http://localhost:5173/video.html?preset=vox-collage
+http://localhost:5173/video.html?preset=handdraw-story
 ```
 
 ## Render A Sample
@@ -45,6 +46,7 @@ npm run render:sample
 npm run render:scroll-story
 npm run render:launch-film
 npm run render:vox-collage
+npm run render:handdraw-story
 ```
 
 Each command starts the local app, captures deterministic frames, generates an original procedural score, builds an MP4 plus a preview still and contact sheet, and stops the app. The signature workflow is a complete no-cost video-generation route: it needs no image, video, or audio generation API. Replace any score with `--audio` when you have properly licensed custom music or narration.

@@ -17,6 +17,7 @@ Requires Node.js 20+. From the repo root:
 - `npm run render:scroll-story` — render the 18-second portrait signature preset with its local score.
 - `npm run render:launch-film` — render the 12-second landscape signature preset with its local score.
 - `npm run render:vox-collage` — render the 15-second portrait paper-collage explainer with its local score.
+- `npm run render:handdraw-story` — render the 20-second hand-drawn story treatment with its local score.
 
 - `npm run dev` — start the local app at `http://localhost:5173/video.html?render=1`.
 - `npm run render:sample` — render the sample film to `assets/sample-clean.mp4` (plus a still and a QC contact sheet). Silent by default.
@@ -36,8 +37,9 @@ These are defined in `starter/app/src/video/VideoApp.jsx` and documented in `doc
 
 ## Customizing a film
 
-- Signature scenes: `starter/app/src/video/ScrollStoryFilm.jsx`, `starter/app/src/video/LaunchFilm.jsx`, and `starter/app/src/video/VoxCollageFilm.jsx`.
+- Signature scenes and optional treatment: `starter/app/src/video/ScrollStoryFilm.jsx`, `starter/app/src/video/LaunchFilm.jsx`, `starter/app/src/video/VoxCollageFilm.jsx`, and `starter/app/src/video/HanddrawStoryFilm.jsx`.
 - Collage project, beat, narration, palette, object, and assembly configuration: `starter/app/src/video/vox-collage-config.json`.
+- Hand-drawn scene, caption, timing, palette, and art configuration: `starter/app/src/video/handdraw-story-config.json`.
 - Preset metadata and project default: `preset-manifest.json` and `default-preset.json` in the same directory.
 - Signature art direction and responsive behavior: `starter/app/src/video/presets.css`.
 

@@ -3,7 +3,7 @@
     {
       "id": "cinematic-scroll-story",
       "title": "Cinematic scroll story",
-      "description": "An energetic portrait journey with beat-synced depth, connected proof actions, and an original locally generated score.",
+      "description": "An energetic portrait journey with beat-synced depth, connected proof actions, and a crisp video-aware score.",
       "asset": "assets/scroll-story-demo-still.png",
       "video": "assets/scroll-story-demo.mp4",
       "pattern": "scroll-story"
@@ -19,7 +19,7 @@
     {
       "id": "vox-collage-explainer",
       "title": "VOX collage explainer",
-      "description": "A creator problem becomes a connected proof loop through configurable paper actors, timed evidence, QC, and embedded local music.",
+      "description": "A creator problem becomes a connected proof loop through configurable paper actors, timed evidence, QC, and a sharp tactile groove.",
       "asset": "assets/vox-collage-demo-still.png",
       "video": "assets/vox-collage-demo.mp4",
       "pattern": "vox-collage"
@@ -31,6 +31,14 @@
       "asset": "assets/vox-collage-higgsfield-demo-still.png",
       "video": "assets/vox-collage-higgsfield-demo.mp4",
       "pattern": "vox-collage-studio"
+    },
+    {
+      "id": "handdraw-story-treatment",
+      "title": "Hand-drawn story treatment",
+      "description": "Aligned ink and color reveal a creator's path from scattered inputs to a film whose claims have visible proof.",
+      "asset": "assets/handdraw-story-demo-still.png",
+      "video": "assets/handdraw-story-demo.mp4",
+      "pattern": "handdraw-story"
     },
     {
       "id": "app-native-explainer",

@@ -1,0 +1,60 @@
+{
+  "project": {
+    "title": "Draw the proof",
+    "subject": "A creator turns a scattered brief into a story people can follow",
+    "treatment": "hand-drawn story",
+    "source": "original code-native demo"
+  },
+  "scenes": [
+    {
+      "id": "scatter",
+      "start": 0,
+      "end": 4,
+      "chapter": "01 / THE MESS",
+      "caption": "A good idea starts scattered.",
+      "accent": "#e76f51",
+      "wash": "#f3d5c7",
+      "art": "scatter"
+    },
+    {
+      "id": "question",
+      "start": 4,
+      "end": 8,
+      "chapter": "02 / THE QUESTION",
+      "caption": "One sharp question gives it direction.",
+      "accent": "#d85b45",
+      "wash": "#f1c9b8",
+      "art": "question"
+    },
+    {
+      "id": "format",
+      "start": 8,
+      "end": 12,
+      "chapter": "03 / THE SHAPE",
+      "caption": "The right format shapes the journey.",
+      "accent": "#e9a23b",
+      "wash": "#f4dfb1",
+      "art": "format"
+    },
+    {
+      "id": "proof",
+      "start": 12,
+      "end": 16,
+      "chapter": "04 / THE PROOF",
+      "caption": "Every claim finds visible proof.",
+      "accent": "#4e8c78",
+      "wash": "#c9dfd5",
+      "art": "proof"
+    },
+    {
+      "id": "share",
+      "start": 16,
+      "end": 20,
+      "chapter": "05 / THE FILM",
+      "caption": "Now the story can be followed—and trusted.",
+      "accent": "#3f7f70",
+      "wash": "#bdd8ce",
+      "art": "share"
+    }
+  ]
+}

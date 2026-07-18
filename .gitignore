@@ -12,11 +12,13 @@ qc/
 !assets/launch-film-demo.mp4
 !assets/vox-collage-demo.mp4
 !assets/vox-collage-higgsfield-demo.mp4
+!assets/handdraw-story-demo.mp4
 !videos/*.mp4
 !website/public/media/*.mp4
 *.mov
 *.wav
 *.mp3
+!design-references/audio/*.mp3
 !starter/sample-assets/voice.mp3
 *.env
 .DS_Store

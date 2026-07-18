@@ -32,6 +32,13 @@ npx create-vision-reel@latest my-film --type launch-film
 npx create-vision-reel@latest my-film --type vox-collage
 ```
 
+The optional code-native hand-drawn treatment uses the same no-cost path:
+
+```bash
+npx create-vision-reel@latest my-film --type handdraw-story
+npm run render:handdraw-story
+```
+
 The generated project contains the application, renderer, procedural music generator, QA utilities, templates, and documentation. After the initial npm dependency download, rendering is local.
 
 ## How It Works

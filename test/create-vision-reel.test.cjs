@@ -50,7 +50,7 @@ test("creates projects with each visual preset", (t) => {
   const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), "create-vision-reel-presets-"));
   t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }));
 
-  for (const preset of ["scroll-story", "launch-film", "vox-collage"]) {
+  for (const preset of ["scroll-story", "launch-film", "vox-collage", "handdraw-story"]) {
     const result = runCli([preset, "--type", preset, "--no-install"], sandbox);
     assert.equal(result.status, 0, result.stderr);
     const config = JSON.parse(
@@ -60,6 +60,10 @@ test("creates projects with each visual preset", (t) => {
     if (preset === "vox-collage") {
       assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "VoxCollageFilm.jsx")), true);
       assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "vox-collage-config.json")), true);
+    }
+    if (preset === "handdraw-story") {
+      assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "HanddrawStoryFilm.jsx")), true);
+      assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "handdraw-story-config.json")), true);
     }
   }
 });

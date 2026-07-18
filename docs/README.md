@@ -14,6 +14,7 @@ Read in this order if you are new:
 10. `17-signature-presets.md`
 11. `18-vox-collage-explainer.md`
 12. `19-no-cost-video-generation.md`
+13. `20-handdraw-story-treatment.md`
 
 Use these when designing quality:
 

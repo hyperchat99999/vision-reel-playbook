@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { DashboardScreen, WorkflowScreen } from "../components/ProductScreens.jsx";
 import defaultPresetConfig from "./default-preset.json";
+import { HanddrawStoryFilm } from "./HanddrawStoryFilm.jsx";
 import { LaunchFilm } from "./LaunchFilm.jsx";
 import { clamp } from "./motion.js";
 import { presetDefinitions, resolvePreset } from "./presets.js";
@@ -265,6 +266,8 @@ function VideoApp() {
     film = <LaunchFilm reducedMotion={reducedMotion} t={t} />;
   } else if (definition.id === "vox-collage") {
     film = <VoxCollageFilm reducedMotion={reducedMotion} t={t} />;
+  } else if (definition.id === "handdraw-story") {
+    film = <HanddrawStoryFilm reducedMotion={reducedMotion} t={t} />;
   } else {
     const scene = sceneAt(t);
     const lt = localTime(scene, t);

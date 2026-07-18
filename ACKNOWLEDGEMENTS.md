@@ -10,6 +10,8 @@ The VOX collage preset was informed by MegaTroll222's MIT-licensed [VOX-COLLAGE-
 
 Vision Reel's collage implementation is an original, JSON-driven React composition designed for deterministic browser rendering. It replaces the reference workflow's single generated metaphor with reusable creator/problem/proof beats, deterministic typography, connected UI evidence, preview accessibility, and local fallback audio.
 
+The optional hand-drawn treatment was informed by xiejunjie524's MIT-licensed [handdraw-story-video](https://github.com/xiejunjie524/handdraw-story-video), especially its use of one color master per scene, a locally derived aligned line layer, directional line-and-color reveals, sparse staging, and scene validation. Vision Reel's implementation combines an original React composition, five original generated editorial illustrations, an original creator-proof storyline, and a new score plan. No upstream code, prompts, example artwork, or generated assets are included.
+
 Two AI-generated concept frames were used as private art-direction references during development. They are documented in [`design-references/README.md`](design-references/README.md) and are not loaded by the runtime or renderer.
 
-The two public signature-demo MP4s contain original video-aware scores generated with ElevenLabs Music v2. Generated projects do not call ElevenLabs: their default scores are created locally and deterministically, and users may supply their own licensed audio with `--audio`.
+The four public deterministic showcase MP4s contain sections of an original video-aware suite generated with ElevenLabs Music v2. Generated projects do not call ElevenLabs: their default scores are created locally and deterministically, and users may supply their own licensed audio with `--audio`.

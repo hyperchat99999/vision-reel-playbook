@@ -40,6 +40,18 @@ Typical structure:
 4. Optional return to character context.
 5. Product proof and close.
 
+## Evidence Treatment: Hand-Drawn Story
+
+A warm cause-and-effect explanation revealed as aligned ink and low-saturation color.
+
+Use when:
+
+- A founder, customer, product-origin, or creator story needs human warmth without generic B-roll.
+- The audience must understand how one decision leads to the next.
+- A sparse paper-white composition would make the idea more approachable than dense UI or collage.
+
+The treatment can sit inside any signature format. Use one master composition per scene, derive the ink layer from that same geometry or image, reveal ink first, then wipe in color. Do not generate independent line and color images: small mismatches create visible jitter.
+
 ## Signature Format 1: Cinematic Scroll Story
 
 A portrait film that turns scrolling into a deliberate camera move through stacked chapters.

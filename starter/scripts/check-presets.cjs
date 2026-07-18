@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, "..", "..");
 const videoDir = path.resolve(root, "starter", "app", "src", "video");
 const manifest = JSON.parse(fs.readFileSync(path.join(videoDir, "preset-manifest.json"), "utf8"));
 const collage = JSON.parse(fs.readFileSync(path.join(videoDir, "vox-collage-config.json"), "utf8"));
+const handdraw = JSON.parse(fs.readFileSync(path.join(videoDir, "handdraw-story-config.json"), "utf8"));
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -62,4 +63,25 @@ collage.beats.forEach((beat, index) => {
 invariant(collage.beats.at(-1).end === collagePreset.duration, "Collage final beat must end at the manifest duration.");
 invariant(JSON.stringify(collage.beats.map((beat) => beat.start)) === JSON.stringify(collagePreset.beats), "Collage beat starts must match the manifest markers.");
 
-console.log(`Checked ${Object.keys(manifest).length} presets and ${collage.beats.length} collage beats.`);
+const handdrawPreset = manifest["handdraw-story"];
+invariant(handdrawPreset && handdrawPreset.kind === "treatment", "The handdraw-story treatment manifest entry is required.");
+invariant(handdraw.project && handdraw.project.treatment === "hand-drawn story", "Hand-drawn treatment metadata is required.");
+invariant(Array.isArray(handdraw.scenes) && handdraw.scenes.length >= 4 && handdraw.scenes.length <= 8, "Hand-drawn treatment needs four to eight scenes.");
+
+const handdrawIds = new Set();
+handdraw.scenes.forEach((scene, index) => {
+  invariant(typeof scene.id === "string" && scene.id.length > 0, `Hand-drawn scene ${index + 1} needs an id.`);
+  invariant(!handdrawIds.has(scene.id), `Duplicate hand-drawn scene id: ${scene.id}`);
+  handdrawIds.add(scene.id);
+  invariant(Number.isFinite(scene.start) && Number.isFinite(scene.end) && scene.end > scene.start, `${scene.id} needs a positive time range.`);
+  invariant(index === 0 ? scene.start === 0 : scene.start === handdraw.scenes[index - 1].end, `${scene.id} must begin where the previous scene ends.`);
+  invariant(typeof scene.caption === "string" && scene.caption.length > 0 && scene.caption.length <= 64, `${scene.id} needs a concise caption.`);
+  invariant(typeof scene.art === "string" && scene.art.length > 0, `${scene.id} needs an art identifier.`);
+  invariant(/^#[0-9a-f]{6}$/i.test(scene.accent), `${scene.id} accent must be a six-digit hex color.`);
+  invariant(/^#[0-9a-f]{6}$/i.test(scene.wash), `${scene.id} wash must be a six-digit hex color.`);
+});
+
+invariant(handdraw.scenes.at(-1).end === handdrawPreset.duration, "Hand-drawn final scene must end at the manifest duration.");
+invariant(JSON.stringify(handdraw.scenes.map((scene) => scene.start)) === JSON.stringify(handdrawPreset.beats), "Hand-drawn scene starts must match the manifest markers.");
+
+console.log(`Checked ${Object.keys(manifest).length} presets, ${collage.beats.length} collage beats, and ${handdraw.scenes.length} hand-drawn scenes.`);

@@ -89,7 +89,7 @@ VideoApp.jsx          render globals, preview controls, and preset routing
 motion.js             deterministic enter / hold / exit helpers
 ```
 
-The URL can select a preset with `?preset=scroll-story`, `?preset=launch-film`, or `?preset=vox-collage`. In a generated project, the CLI writes the chosen value to `default-preset.json`; omitting `--type` still selects `classic`.
+The URL can select a preset with `?preset=scroll-story`, `?preset=launch-film`, `?preset=vox-collage`, or the optional `?preset=handdraw-story` treatment. In a generated project, the CLI writes the chosen value to `default-preset.json`; omitting `--type` still selects `classic`.
 
 All presets use the same browser globals, so adding a format does not require a new renderer. The manifest is the authoritative source for duration and default viewport dimensions.
 
