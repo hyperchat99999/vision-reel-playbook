@@ -40,7 +40,31 @@ Start with the audience's communication problem—not a fashionable visual style
 | **Make a connected journey feel inevitable.** Portrait depth, chapter reveals, and one continuous visual argument. | **Make people care that this now exists.** Landscape kinetic type, campaign energy, and one decisive proof beat. | **Make an abstract mechanism concrete.** Paper actors, meaning-led color, and evidence assembled into a visible payoff. |
 | [`Watch 18s film`](assets/scroll-story-demo.mp4) · `9:16` | [`Watch 12s film`](assets/launch-film-demo.mp4) · `16:9` | [`Watch 15s film`](assets/vox-collage-demo.mp4) · `9:16` |
 
-All three formats are deterministic, configurable, reduced-motion aware, and rendered frame by frame. React and CSS draw the scenes; the browser captures exact frames; repository code can synthesize original fallback music; FFmpeg finishes the MP4. The default route needs **no paid generation API**. The showcase masters use a sharper, video-aware ElevenLabs Music v2 suite; that optional production pass is source-documented.
+All three formats are deterministic, configurable, reduced-motion aware, and rendered frame by frame. React and CSS draw the scenes; the browser captures exact frames; repository code can synthesize original fallback music; FFmpeg finishes the MP4. The default route needs **no paid generation API**. Scroll, collage, and hand-drawn showcase masters use a sharper Music v2 suite; the launch film keeps its original tailored score.
+
+## A new visual treatment: draw the story into focus
+
+<p align="center">
+  <a href="assets/handdraw-story-demo.mp4">
+    <img src="assets/handdraw-story-demo-still.png" alt="Hand-drawn creator story moving from scattered material to visible proof" width="74%" />
+  </a>
+</p>
+
+<p align="center"><strong>Warm human storytelling, without sacrificing deterministic motion.</strong></p>
+
+The [20-second hand-drawn film](assets/handdraw-story-demo.mp4) follows one creator from scattered inputs to a story whose claims have visible proof. Five character-consistent editorial illustrations carry the emotional arc; every ink layer is derived from its exact color master, so drawing and color reveals remain perfectly registered.
+
+This is an optional **treatment**, not a fourth communication format. Apply it to a scroll, launch, or collage story when cause-and-effect, character, and human warmth matter more than interface density.
+
+| HUMAN STORY | STABLE REVEAL | REUSABLE PIPELINE |
+| :--- | :--- | :--- |
+| One recurring character and a continuous coral thread make the transformation emotionally legible. | Ink and color share the same source image, eliminating the visual jitter of separately generated layers. | Replace five masters, run `npm run handdraw:layers`, preview, render, and inspect the contact sheet. |
+
+<p align="center">
+  <a href="assets/handdraw-story-demo.mp4"><strong>Watch the film</strong></a>
+  · <a href="docs/20-handdraw-story-treatment.md">Read the treatment guide</a>
+  · <a href="design-references/handdraw-story/README.md">See the art-direction provenance</a>
+</p>
 
 > [!TIP]
 > **A fuzzy idea is enough.** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage, explains why the runner-up lost, and produces a buildable brief, beat sheet, evidence treatment, and word-anchor plan—in plain language.
@@ -67,21 +91,6 @@ npm run render:scroll-story
 ```
 
 Swap `scroll-story` for `launch-film` or `vox-collage`. The original `classic` preset remains available for backward compatibility. Finished public masters are collected in [`videos/`](videos/).
-
-<details>
-<summary><strong>Add the optional hand-drawn story treatment</strong></summary>
-<br />
-
-[![Hand-drawn story treatment still](assets/handdraw-story-demo-still.png)](assets/handdraw-story-demo.mp4)
-
-The [20-second hand-drawn demo](assets/handdraw-story-demo.mp4) turns scattered creator inputs into a causal, human story. It is a treatment—not a fourth communication format—so use its aligned ink-and-color reveal inside a scroll, launch, or collage idea when warmth and cause-and-effect matter. Five original illustrated masters supply the human storytelling; their perfectly registered ink layers are derived locally; the bundled film still costs nothing to render. [Read the treatment guide →](docs/20-handdraw-story-treatment.md)
-
-```bash
-npx create-vision-reel@latest my-film --type handdraw-story
-npm run render:handdraw-story
-```
-
-</details>
 
 <details>
 <summary><strong>See the optional generated-media production pass</strong></summary>

@@ -7,7 +7,6 @@ const suite = path.resolve(process.argv[2] || "");
 const ffmpeg = require(path.resolve(root, "starter", "app", "node_modules", "ffmpeg-static")) || "ffmpeg";
 const sections = [
   { id: "scroll-story", start: 0, duration: 18 },
-  { id: "launch-film", start: 18, duration: 12 },
   { id: "vox-collage", start: 30, duration: 15 },
   { id: "handdraw-story", start: 45, duration: 20 }
 ];

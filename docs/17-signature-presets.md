@@ -45,7 +45,7 @@ Signature demos default to 24 fps; use `--fps 30` for a 30 fps delivery. Overrid
 
 ## Audio
 
-The repository generates an original deterministic procedural score for each signature preset, keeping default rendering local and reproducible. The improved fallback generator uses tighter drums, separated bass, bright plucks, short impacts, stereo accents, and preset-specific chapter cues. The public showcase masters use four sections of a crisp, video-aware ElevenLabs Music v2 suite; generated projects still default to the local track and never call a paid service.
+The repository generates an original deterministic procedural score for each signature preset, keeping default rendering local and reproducible. The improved fallback generator uses tighter drums, separated bass, bright plucks, short impacts, stereo accents, and preset-specific chapter cues. The scroll, collage, and hand-drawn showcase masters use sections of a crisp Music v2 suite; the launch film retains its earlier tailored score. Generated projects still default to local tracks and never call a paid service.
 
 Replace the local score with licensed music or voiceover using:
 

@@ -14,4 +14,4 @@ The optional hand-drawn treatment was informed by xiejunjie524's MIT-licensed [h
 
 Two AI-generated concept frames were used as private art-direction references during development. They are documented in [`design-references/README.md`](design-references/README.md) and are not loaded by the runtime or renderer.
 
-The four public deterministic showcase MP4s contain sections of an original video-aware suite generated with ElevenLabs Music v2. Generated projects do not call ElevenLabs: their default scores are created locally and deterministically, and users may supply their own licensed audio with `--audio`.
+The public scroll, collage, and hand-drawn showcase MP4s contain sections of an original video-aware suite generated with ElevenLabs Music v2; the launch film retains its earlier tailored score. Generated projects do not call ElevenLabs: their default scores are created locally and deterministically, and users may supply their own licensed audio with `--audio`.
