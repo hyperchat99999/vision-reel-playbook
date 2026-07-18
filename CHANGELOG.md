@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Redesigned the GitHub landing page around the campaign artwork, signature-film gallery, format discovery path, and progressive disclosure for technical detail.
 - Reframed the discovery consultant around the three signature formats, with communication-job diagnosis, evidence-treatment guidance, and an explicit alternate-format test.
 - Updated the GitHub and hosted landing pages to lead with scroll, launch, or collage selection instead of treating app-native and hybrid production treatments as the primary formats.
 - Increased cinematic scroll-story energy with beat-synced motion rails, chapter impacts, connected proof maps, capture status actions, and a denser 120 BPM local score.

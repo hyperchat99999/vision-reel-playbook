@@ -1,50 +1,64 @@
-# Vision Reel Playbook
+<p align="center">
+  <a href="https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site">
+    <img src="website/public/og.png" alt="Vision Reel — direct the product" width="100%" />
+  </a>
+</p>
 
-[![CI](https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml/badge.svg)](https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/create-vision-reel.svg)](https://www.npmjs.com/package/create-vision-reel)
-[![npm downloads](https://img.shields.io/npm/dm/create-vision-reel.svg)](https://www.npmjs.com/package/create-vision-reel)
-[![GitHub release](https://img.shields.io/github/v/release/hyperchat99999/vision-reel-playbook)](https://github.com/hyperchat99999/vision-reel-playbook/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Node 20+](https://img.shields.io/badge/Node-20%2B-0b1f33)](starter/README.md)
-[![Public safe](https://img.shields.io/badge/Public--safe-IP%20scan-1d4fd8)](docs/09-ip-safety.md)
-[![Starter included](https://img.shields.io/badge/Starter-included-0f9f83)](starter/README.md)
-[![Live showcase](https://img.shields.io/badge/Live-showcase-c9ff5d)](https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site)
+<h1 align="center">Vision Reel Playbook</h1>
 
-**Vision Reel Playbook turns a real product, workflow, strategy, or prototype into the right kind of short film for the communication problem.** It pairs a repeatable discovery method with three signature formats and a working starter kit, so an idea that would normally live in a deck or screen recording becomes something people watch, follow, and remember.
+<p align="center"><strong>Don't record the product. Direct it.</strong></p>
 
-You start with the audience's question, choose a **cinematic scroll story**, **editorial launch film**, or **VOX collage explainer**, then map each sentence to one visible actor. The browser captures every frame deterministically and checks the result for blank frames, broken timing, or leaked private data. The local path uses no paid generation service; voiceover and generated context remain optional production upgrades.
+<p align="center">
+  An open-source system for turning products, workflows, launches, and ideas into<br />
+  polished short films where every claim earns visible proof.
+</p>
 
-## Start With The Communication Problem
+<p align="center">
+  <a href="https://vision-reel-playbook-oss.sudiv-gulla-1110.chatgpt.site"><strong>Watch the showcase</strong></a>
+  · <a href="prompts/idea-to-film-consultant.md">Find your format</a>
+  · <a href="MAKE_YOUR_FIRST_FILM.md">Make your first film</a>
+  · <a href="docs/README.md">Read the playbook</a>
+</p>
 
-Do not choose a format because it looks fashionable. Choose the one that solves the viewer's actual problem:
+<p align="center">
+  <a href="https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml"><img src="https://github.com/hyperchat99999/vision-reel-playbook/actions/workflows/ci.yml/badge.svg" alt="CI status" /></a>
+  <a href="https://www.npmjs.com/package/create-vision-reel"><img src="https://img.shields.io/npm/v/create-vision-reel.svg" alt="npm version" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-30b37d.svg" alt="MIT license" /></a>
+  <a href="docs/19-no-cost-video-generation.md"><img src="https://img.shields.io/badge/Default%20render-$0-3156ff.svg" alt="No-cost default render" /></a>
+  <a href="docs/09-ip-safety.md"><img src="https://img.shields.io/badge/Public-safe-checked-ff5e49.svg" alt="Public-safe checks" /></a>
+</p>
 
-| If the audience needs to… | Start with | Why it fits |
-| --- | --- | --- |
-| Follow a connected journey, workflow, or system | [`scroll-story`](assets/scroll-story-demo.mp4) | Portrait depth and chapter continuity make sequence itself become the proof. |
-| Care that a product, feature, or project now exists | [`launch-film`](assets/launch-film-demo.mp4) | Landscape kinetic type creates announcement energy, then one product beat earns the claim. |
-| Understand an abstract problem, mechanism, or concept | [`vox-collage`](assets/vox-collage-demo.mp4) | Concrete paper actors and assembled evidence turn explanation into a visible before/after. |
+---
 
-**Not sure which job you have?** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It interviews you in plain language, recommends one of the three formats with a reason and alternate, then produces the brief, beat sheet, evidence treatment, and word-anchor plan. No coding needed.
+## Three stories. One render system.
 
-> **Legacy starter proof.** The backward-compatible `classic` sample below demonstrates the shared render contract end-to-end: real UI, word-synced timing, browser-captured frames, and FFmpeg assembly. The three signature films are featured in [Signature Presets](#signature-presets).
+Start with the audience's communication problem—not a fashionable visual style.
 
-![Sample film rendered by the Vision Reel starter kit](assets/sample.gif)
+| 01 · CINEMATIC SCROLL | 02 · EDITORIAL LAUNCH | 03 · VOX COLLAGE |
+| :--- | :--- | :--- |
+| [![Cinematic scroll-story still](assets/scroll-story-demo-still.png)](assets/scroll-story-demo.mp4) | [![Editorial launch-film still](assets/launch-film-demo-still.png)](assets/launch-film-demo.mp4) | [![VOX collage-explainer still](assets/vox-collage-demo-still.png)](assets/vox-collage-demo.mp4) |
+| **Make a connected journey feel inevitable.** Portrait depth, chapter reveals, and one continuous visual argument. | **Make people care that this now exists.** Landscape kinetic type, campaign energy, and one decisive proof beat. | **Make an abstract mechanism concrete.** Paper actors, meaning-led color, and evidence assembled into a visible payoff. |
+| [`Watch 18s film`](assets/scroll-story-demo.mp4) · `9:16` | [`Watch 12s film`](assets/launch-film-demo.mp4) · `16:9` | [`Watch 15s film`](assets/vox-collage-demo.mp4) · `9:16` |
 
-<sub>The GIF above is a silent preview. The [full clean cut (`assets/sample-clean.mp4`)](assets/sample-clean.mp4) plays with a sample voiceover from a generic voice-generation service. Audio is optional; films render fine silent. Regenerate the GIF with `npm run gif`.</sub>
+All three formats are deterministic, configurable, reduced-motion aware, and rendered frame by frame. React and CSS draw the scenes; the browser captures exact frames; repository code synthesizes original music; FFmpeg finishes the MP4. The default route needs **no paid generation API**.
 
-## Quickstart for Non-Coders
+> [!TIP]
+> **A fuzzy idea is enough.** Run the [Idea-to-Film discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage, explains why the runner-up lost, and produces a buildable brief, beat sheet, evidence treatment, and word-anchor plan—in plain language.
 
-You do not need to write code. Three steps:
+## From idea to finished film
 
-1. **Diagnose the idea.** Open the [discovery consultant](prompts/idea-to-film-consultant.md). It recommends scroll, launch, or collage based on the audience's communication problem—not your technical knowledge.
-2. **Hand off a buildable plan.** Give its brief, beat sheet, format recommendation, and word anchors to a developer or development assistant alongside [`AGENTS.md`](AGENTS.md).
-3. **Review and share.** You get a clean format-native MP4 with built-in checks for blank frames, timing, and private-data leaks. Add voiceover or generated context only when it improves the explanation.
+| 1 · DISCOVER | 2 · DIRECT | 3 · PROVE |
+| :--- | :--- | :--- |
+| Start with the audience's question and choose the format that solves it. | Give every spoken sentence one visible actor: UI, type, spatial chapter, or collage object. | Render reproducibly, inspect contact sheets, check timing, and scan for private data. |
+| [Run the consultant →](prompts/idea-to-film-consultant.md) | [Open the creative brief →](templates/creative-brief.md) | [See the quality rubric →](docs/13-quality-rubric.md) |
 
-Want to drive it yourself? The [10-minute path](#try-in-10-minutes) and [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM.md) walk through the commands.
+### For non-technical creators
 
-## Create A Standalone Project
+You do not need to write code. Run the consultant, then give its output and [`AGENTS.md`](AGENTS.md) to a developer or development assistant. You receive a clean format-native MP4 with the quality checks already wired in.
 
-Create a clean project with the starter, render scripts, safety checks, and templates included. The generator is published as [`create-vision-reel`](https://www.npmjs.com/package/create-vision-reel). Pick the format recommended by the consultant:
+### For builders
+
+Create a self-contained project with the starter, render scripts, safety checks, and templates included:
 
 ```bash
 npx create-vision-reel@latest my-film --type scroll-story
@@ -52,53 +66,37 @@ cd my-film
 npm run render:scroll-story
 ```
 
-Choose a signature preset when you create the project:
+Swap `scroll-story` for `launch-film` or `vox-collage`. The original `classic` preset remains available for backward compatibility. Finished public masters are collected in [`videos/`](videos/).
 
-```bash
-npx create-vision-reel@latest my-scroll-film --type scroll-story
-npx create-vision-reel@latest my-launch-film --type launch-film
-npx create-vision-reel@latest my-collage-film --type vox-collage
-```
-
-The original `classic` preset remains the default only for backward compatibility. New films should deliberately choose one of the three signature formats.
-
-All finished public masters are also collected in [`videos/`](videos/) for convenient review and download. The existing `assets/` paths remain canonical so gallery and renderer links stay backward compatible.
-
-## Signature Presets
-
-| Cinematic Scroll Story | Editorial Launch Film | VOX Collage Explainer |
-| --- | --- | --- |
-| [![Portrait cinematic scroll-story still](assets/scroll-story-demo-still.png)](assets/scroll-story-demo.mp4) | [![Landscape editorial launch-film still](assets/launch-film-demo-still.png)](assets/launch-film-demo.mp4) | [![Portrait VOX collage explainer still](assets/vox-collage-demo-still.png)](assets/vox-collage-demo.mp4) |
-| 18-second, 9:16, layered 2.5D depth and scroll choreography. | 12-second, 16:9, kinetic editorial type and product-proof cuts. | 15-second, 9:16, paper-collage problem/solution storytelling driven by JSON. |
-| `npm run render:scroll-story` | `npm run render:launch-film` | `npm run render:vox-collage` |
-
-All three signature presets are deterministic, configurable, keyboard-previewable, reduced-motion aware, and rendered frame-by-frame. The default video-generation route is fully local: code-native visuals, procedural music, browser frame capture, and FFmpeg encoding with no paid API. See [`docs/19-no-cost-video-generation.md`](docs/19-no-cost-video-generation.md) for the complete workflow, [`docs/17-signature-presets.md`](docs/17-signature-presets.md) for the shared preset contract, and [`docs/18-vox-collage-explainer.md`](docs/18-vox-collage-explainer.md) for the collage configuration and optional production pass.
-
-### Optional VOX Studio Cut
+<details>
+<summary><strong>See the optional generated-media production pass</strong></summary>
+<br />
 
 [![VOX collage studio-cut still](assets/vox-collage-higgsfield-demo-still.png)](assets/vox-collage-higgsfield-demo.mp4)
 
-The [15-second studio cut](assets/vox-collage-higgsfield-demo.mp4) shows how the same reusable story contract can be pushed further with approved tactile collage plates, connected 480p Seedance motion, an upbeat ElevenLabs narrator, and a fast three-part instrumental score. The generated pass is source-provenanced under [`design-references/vox-collage/`](design-references/vox-collage/); the shipped `vox-collage` preset remains the reproducible, paid-service-free implementation.
+The [15-second VOX studio cut](assets/vox-collage-higgsfield-demo.mp4) enriches the same deterministic story contract with source-provenanced collage plates, connected Seedance motion, upbeat ElevenLabs narration, and a fast score. The shipped `vox-collage` preset remains the reproducible, paid-service-free implementation.
+
+</details>
 
 ## The Promise
 
 Most professional work is trapped in decks, demos, screenshots, or long explanations. Vision Reel Playbook gives you a repeatable workflow for making a sharper artifact:
 
 - Write the voiceover first.
-- Map every sentence to one visible screen actor.
-- Make real UI or structured visuals demonstrate the idea.
+- Map every sentence to one visible actor.
+- Let interface evidence, kinetic type, spatial chapters, or collage objects demonstrate the idea.
 - Use generated clips only where human context helps.
 - Render deterministic frames you can reproduce exactly.
 - Run QC so the final film has no blank screens, broken timing, or private-data leaks.
 
 ## How It Works
 
-Two loops drive every film: a **creative loop** (question → script → beats → word anchors) and a **render loop** (app state → browser frames → stitch → QC). The finished voiceover's word-level timing is the clock everything else runs on.
+Two loops drive every film: a **creative loop** (question → format → script → beats → word anchors) and a **render loop** (scene state → browser frames → stitch → QC). The finished voiceover's word-level timing is the clock everything else runs on.
 
 ```mermaid
 flowchart LR
-  A["Business Question"] --> B["Voiceover Script"]
-  B --> C["Beat Sheet"]
+  A["Business Question"] --> B["Format Diagnosis"]
+  B --> C["Voiceover + Beat Sheet"]
   C --> D["Word-Level Timing"]
   D --> E["Timeline Anchors"]
   E --> F["Video Harness"]
@@ -109,21 +107,21 @@ flowchart LR
   J --> C
 ```
 
-The harness is driven through a tiny **render contract** — `window.__filmSetT(t)`, `window.__filmReady`, `window.__filmDuration` — so any stack (React, Vue, Svelte, Canvas, or plain HTML) can be stepped frame-by-frame and inspected at any timestamp. The app-native and hybrid-trilogy variants are diagrammed in [`docs/11-architecture.md`](docs/11-architecture.md).
+The harness is driven through a tiny **render contract** — `window.__filmSetT(t)`, `window.__filmReady`, `window.__filmDuration` — so any stack (React, Vue, Svelte, Canvas, or plain HTML) can be stepped frame by frame and inspected at any timestamp. The shared preset architecture is documented in [`docs/11-architecture.md`](docs/11-architecture.md).
 
 ## Try In 10 Minutes
 
 ```bash
 npm run setup
 npm run check
-npm run render:sample
+npm run render:scroll-story
 ```
 
-The sample render creates:
+The signature render creates:
 
-- `assets/sample-clean.mp4`
-- `assets/sample-still.png`
-- `assets/sample-contact-sheet.jpg`
+- `assets/scroll-story-demo.mp4`
+- `assets/scroll-story-demo-still.png`
+- `assets/scroll-story-demo-contact-sheet.jpg`
 
 Render the signature films with:
 
@@ -133,20 +131,24 @@ npm run render:launch-film
 npm run render:vox-collage
 ```
 
-![Rendered starter film still](assets/sample-still.png)
-
 For the guided path, start with [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM.md).
+
+<details>
+<summary><strong>See the backward-compatible classic render</strong></summary>
+<br />
+
+Run `npm run render:sample` to exercise the original 24-second real-UI proof loop.
+
+[![Classic starter-film still](assets/sample-still.png)](assets/sample-clean.mp4)
+
+</details>
 
 ## What You Can Make
 
-- Product explainers where the real interface acts out the narration.
-- Founder or strategy films that make an abstract idea tangible.
-- Guided-workflow demos grounded in real product evidence.
-- Hybrid films with generated human context plus real UI proof.
-- Portrait scroll stories with cinematic depth and chapter-based reveals.
-- Editorial launch films with kinetic typography and a clear product proof beat.
-- Paper-collage explainers that turn a creator, product, process, or concept problem into a visible proof loop.
-- Board, sales, launch, or internal vision videos that feel polished and specific.
+| SELL THE SHIFT | EXPLAIN THE MECHANISM | PROVE THE WORKFLOW |
+| :--- | :--- | :--- |
+| Product and feature launches, founder stories, keynote openers, repository releases. | Strategy films, concept explainers, creator education, before/after narratives. | Product explainers, guided demos, sales proof, board and internal decision films. |
+| **Best starting point:** launch film | **Best starting point:** VOX collage | **Best starting point:** scroll story or real-UI proof inside any format |
 
 ## What Makes This Different
 
@@ -161,6 +163,10 @@ Many tools can create videos from code, screenshots, or prompts. This repo focus
 
 ## How This Compares
 
+<details>
+<summary><strong>See where Vision Reel fits among video and demo tools</strong></summary>
+<br />
+
 The browser → frames → FFmpeg plumbing here is deliberately boring and swappable. What the repo adds is an opinionated **method and quality bar** for one specific kind of film. Here is where it fits, and where another tool may serve you better:
 
 | If you want… | Reach for | What this playbook adds |
@@ -171,6 +177,8 @@ The browser → frames → FFmpeg plumbing here is deliberately boring and swapp
 | Only the browser-to-video plumbing | [timecut](https://github.com/tungs/timecut), [puppeteer-capture](https://github.com/alexey-pelykh/puppeteer-capture) | The same mechanism wrapped in an end-to-end method: word anchors, visual-completeness rules, blank-frame and timing QC, and an IP-safety gate. |
 
 **Use those instead if** you need an interactive demo, a one-off capture, or high-volume generic content. **Use this if** you want a repeatable standard for polished, specific films where a real product or idea proves each claim on screen.
+
+</details>
 
 ## Showcase
 
@@ -189,6 +197,10 @@ Made something with the playbook? Use the [showcase submission form](https://git
 - See [SUPPORT.md](SUPPORT.md) for help and [SECURITY.md](SECURITY.md) for sensitive reports.
 
 ## Repo Map
+
+<details>
+<summary><strong>Explore the repository structure</strong></summary>
+<br />
 
 ```text
 docs/
@@ -218,6 +230,8 @@ site/
 website/
   The production Sites showcase with playable masters and the no-cost workflow.
 ```
+
+</details>
 
 ## Build Your Own Film
 
