@@ -14,6 +14,10 @@ Requires Node.js 20+. From the repo root:
 
 ## Key commands (run from the repo root)
 
+- `npm run render:scroll-story` — render the 18-second portrait signature preset with its local score.
+- `npm run render:launch-film` — render the 12-second landscape signature preset with its local score.
+- `npm run render:vox-collage` — render the 15-second portrait paper-collage explainer with its local score.
+
 - `npm run dev` — start the local app at `http://localhost:5173/video.html?render=1`.
 - `npm run render:sample` — render the sample film to `assets/sample-clean.mp4` (plus a still and a QC contact sheet). Silent by default.
 - `npm run gif` — regenerate `assets/sample.gif` from the rendered MP4.
@@ -31,6 +35,11 @@ The video page must keep exposing these browser globals; the renderer depends on
 These are defined in `starter/app/src/video/VideoApp.jsx` and documented in `docs/06-ui-as-film-set.md` and `docs/11-architecture.md`.
 
 ## Customizing a film
+
+- Signature scenes: `starter/app/src/video/ScrollStoryFilm.jsx`, `starter/app/src/video/LaunchFilm.jsx`, and `starter/app/src/video/VoxCollageFilm.jsx`.
+- Collage project, beat, narration, palette, object, and assembly configuration: `starter/app/src/video/vox-collage-config.json`.
+- Preset metadata and project default: `preset-manifest.json` and `default-preset.json` in the same directory.
+- Signature art direction and responsive behavior: `starter/app/src/video/presets.css`.
 
 - Beats / timeline: `starter/app/src/video/timeline.js`.
 - Scenes and visual actors: `starter/app/src/video/VideoApp.jsx`.

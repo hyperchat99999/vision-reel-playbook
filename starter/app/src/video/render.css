@@ -9,10 +9,94 @@ body {
   overflow: hidden;
 }
 
+.film-preview-controls {
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  bottom: 18px;
+  width: min(860px, calc(100vw - 28px));
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 12px 14px;
+  color: #f8fafc;
+  background: rgba(8, 13, 24, 0.88);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.preview-preset-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.preview-preset-tabs a {
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.preview-preset-tabs a.active {
+  border-color: #caff63;
+  color: #caff63;
+}
+
+.film-preview-controls label {
+  display: grid;
+  grid-template-columns: 150px 1fr 90px;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.film-preview-controls input {
+  width: 100%;
+  accent-color: #ff5c45;
+}
+
+.film-preview-controls strong {
+  color: #caff63;
+  text-align: right;
+}
+
+.film-preview-controls p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 10px;
+  text-align: center;
+}
+
+body.render .film-preview-controls {
+  display: none !important;
+}
+
 body.render .sidebar,
 body.render .workspace,
 body.render .card,
 body.render .nav {
   transition: none !important;
+}
+
+@media (max-width: 680px) {
+  .film-preview-controls label {
+    grid-template-columns: 1fr auto;
+  }
+
+  .film-preview-controls label span {
+    display: none;
+  }
+
+  .film-preview-controls p {
+    display: none;
+  }
 }
 

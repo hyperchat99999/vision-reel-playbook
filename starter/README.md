@@ -31,6 +31,9 @@ Open:
 ```text
 http://localhost:5173/
 http://localhost:5173/video.html?render=1
+http://localhost:5173/video.html?preset=scroll-story
+http://localhost:5173/video.html?preset=launch-film
+http://localhost:5173/video.html?preset=vox-collage
 ```
 
 ## Render A Sample
@@ -39,7 +42,12 @@ From the repo root (run `npm run setup` first if you have not):
 
 ```bash
 npm run render:sample
+npm run render:scroll-story
+npm run render:launch-film
+npm run render:vox-collage
 ```
+
+Each command starts the local app, captures deterministic frames, generates an original procedural score, builds an MP4 plus a preview still and contact sheet, and stops the app. The signature workflow is a complete no-cost video-generation route: it needs no image, video, or audio generation API. Replace any score with `--audio` when you have properly licensed custom music or narration.
 
 This starts the local app, captures frames, builds the sample film at `assets/sample-clean.mp4` (plus a preview still in `assets/` and a QC contact sheet in `qc/`), and stops the app. The sample renders silent by default — pass a voiceover with `--audio` (see manual rendering below).
 

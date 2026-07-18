@@ -9,7 +9,7 @@
 [![Public safe](https://img.shields.io/badge/Public--safe-IP%20scan-1d4fd8)](docs/09-ip-safety.md)
 [![Starter included](https://img.shields.io/badge/Starter-included-0f9f83)](starter/README.md)
 
-**Vision Reel Playbook turns a real product, workflow, strategy, or prototype into a short film where the work itself acts out the story and proves each claim on screen.** It pairs a repeatable method with a working starter kit, so an idea that would normally live in a deck or a screen recording becomes something people watch, follow, and remember.
+**Vision Reel Playbook turns a real product, workflow, strategy, or prototype into a short film where the work itself acts out the story and proves each claim on screen.** It pairs a repeatable method with a working starter kit and four reusable visual presets, so an idea that would normally live in a deck or a screen recording becomes something people watch, follow, and remember.
 
 You write the voiceover first, map each sentence to one thing on screen, and your real interface is captured frame-by-frame, timed to your words, and checked for blank frames, broken timing, or leaked private data. The playbook is yours to read; the starter kit runs locally and renders a real-UI film with no paid services — drive it yourself, hand it to a developer, or use a development assistant to run it with you (see [`AGENTS.md`](AGENTS.md)). A voiceover or generated character footage are optional add-ons that may use paid external services.
 
@@ -40,6 +40,34 @@ npx create-vision-reel@latest my-film
 cd my-film
 npm run render:sample
 ```
+
+Choose a signature preset when you create the project:
+
+```bash
+npx create-vision-reel@latest my-scroll-film --type scroll-story
+npx create-vision-reel@latest my-launch-film --type launch-film
+npx create-vision-reel@latest my-collage-film --type vox-collage
+```
+
+The original `classic` preset remains the default, so existing commands and projects keep working.
+
+All finished public masters are also collected in [`videos/`](videos/) for convenient review and download. The existing `assets/` paths remain canonical so gallery and renderer links stay backward compatible.
+
+## Signature Presets
+
+| Cinematic Scroll Story | Editorial Launch Film | VOX Collage Explainer |
+| --- | --- | --- |
+| [![Portrait cinematic scroll-story still](assets/scroll-story-demo-still.png)](assets/scroll-story-demo.mp4) | [![Landscape editorial launch-film still](assets/launch-film-demo-still.png)](assets/launch-film-demo.mp4) | [![Portrait VOX collage explainer still](assets/vox-collage-demo-still.png)](assets/vox-collage-demo.mp4) |
+| 18-second, 9:16, layered 2.5D depth and scroll choreography. | 12-second, 16:9, kinetic editorial type and product-proof cuts. | 15-second, 9:16, paper-collage problem/solution storytelling driven by JSON. |
+| `npm run render:scroll-story` | `npm run render:launch-film` | `npm run render:vox-collage` |
+
+All three signature presets are deterministic, configurable, keyboard-previewable, reduced-motion aware, and rendered frame-by-frame. The default video-generation route is fully local: code-native visuals, procedural music, browser frame capture, and FFmpeg encoding with no paid API. See [`docs/19-no-cost-video-generation.md`](docs/19-no-cost-video-generation.md) for the complete workflow, [`docs/17-signature-presets.md`](docs/17-signature-presets.md) for the shared preset contract, and [`docs/18-vox-collage-explainer.md`](docs/18-vox-collage-explainer.md) for the collage configuration and optional production pass.
+
+### Optional VOX Studio Cut
+
+[![VOX collage studio-cut still](assets/vox-collage-higgsfield-demo-still.png)](assets/vox-collage-higgsfield-demo.mp4)
+
+The [15-second studio cut](assets/vox-collage-higgsfield-demo.mp4) shows how the same reusable story contract can be pushed further with approved tactile collage plates, connected 480p Seedance motion, an upbeat ElevenLabs narrator, and a fast three-part instrumental score. The generated pass is source-provenanced under [`design-references/vox-collage/`](design-references/vox-collage/); the shipped `vox-collage` preset remains the reproducible, paid-service-free implementation.
 
 ## The Promise
 
@@ -86,6 +114,14 @@ The sample render creates:
 - `assets/sample-still.png`
 - `assets/sample-contact-sheet.jpg`
 
+Render the signature films with:
+
+```bash
+npm run render:scroll-story
+npm run render:launch-film
+npm run render:vox-collage
+```
+
 ![Rendered starter film still](assets/sample-still.png)
 
 For the guided path, start with [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM.md).
@@ -96,6 +132,9 @@ For the guided path, start with [`MAKE_YOUR_FIRST_FILM.md`](MAKE_YOUR_FIRST_FILM
 - Founder or strategy films that make an abstract idea tangible.
 - Guided-workflow demos grounded in real product evidence.
 - Hybrid films with generated human context plus real UI proof.
+- Portrait scroll stories with cinematic depth and chapter-based reveals.
+- Editorial launch films with kinetic typography and a clear product proof beat.
+- Paper-collage explainers that turn a creator, product, process, or concept problem into a visible proof loop.
 - Board, sales, launch, or internal vision videos that feel polished and specific.
 
 ## What Makes This Different
@@ -159,6 +198,9 @@ prompts/
 gallery/
   Public-safe showcase cards and metadata.
 
+design-references/
+  Generated art-direction references and their provenance notes; not runtime assets.
+
 site/
   Static GitHub Pages landing page.
 ```
@@ -179,8 +221,9 @@ The starter app includes:
 
 - A fictional dashboard.
 - A learner/workflow screen.
+- Four presets: classic, cinematic scroll story, editorial launch film, and VOX collage explainer.
 - A `video.html` entry that exposes `window.__filmSetT(t)`.
-- A 3-beat timeline: intro, real UI proof, outcome.
+- Deterministic enter, hold, and exit choreography for every signature scene.
 - A renderer that starts the app, captures browser frames, and stitches a sample video.
 
 Run the full sample from the repo root:
@@ -201,6 +244,8 @@ Open:
 
 ```text
 http://localhost:5173/video.html?render=1
+http://localhost:5173/video.html?preset=scroll-story
+http://localhost:5173/video.html?preset=launch-film
 ```
 
 ## IP Safety
@@ -222,3 +267,5 @@ The short version:
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+See [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) for design-research attribution.

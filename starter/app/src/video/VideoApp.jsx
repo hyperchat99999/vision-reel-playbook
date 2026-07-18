@@ -1,9 +1,16 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { DashboardScreen, WorkflowScreen } from "../components/ProductScreens.jsx";
+import defaultPresetConfig from "./default-preset.json";
+import { LaunchFilm } from "./LaunchFilm.jsx";
+import { clamp } from "./motion.js";
+import { presetDefinitions, resolvePreset } from "./presets.js";
+import { ScrollStoryFilm } from "./ScrollStoryFilm.jsx";
+import { VoxCollageFilm } from "./VoxCollageFilm.jsx";
 import { duration, localTime, sceneAt } from "./timeline.js";
 import "../styles.css";
 import "./render.css";
+import "./presets.css";
 
 function StageBackground() {
   return (
@@ -178,29 +185,112 @@ function CloseScene({ t }) {
   );
 }
 
+function PreviewControls({ definition, t, setT }) {
+  return (
+    <aside className="film-preview-controls" aria-label="Film preview controls">
+      <div className="preview-preset-tabs">
+        {Object.values(presetDefinitions).map((preset) => (
+          <a className={preset.id === definition.id ? "active" : ""} href={`?preset=${preset.id}`} key={preset.id}>
+            {preset.label}
+          </a>
+        ))}
+      </div>
+      <label>
+        <span>{definition.label}</span>
+        <input
+          aria-label="Film timeline"
+          max={definition.duration}
+          min="0"
+          onChange={(event) => setT(Number(event.target.value))}
+          step="0.01"
+          type="range"
+          value={t}
+        />
+        <strong>{t.toFixed(1)}s / {definition.duration}s</strong>
+      </label>
+      <p>{definition.id === "scroll-story" ? "Scroll or use the timeline keys to travel through the story." : "Scrub the timeline to inspect every deterministic state."}</p>
+    </aside>
+  );
+}
+
 function VideoApp() {
-  const [t, setT] = useState(0);
+  const params = useMemo(() => new URLSearchParams(window.location.search), []);
+  const definition = resolvePreset(params.get("preset") || defaultPresetConfig.preset);
+  const renderMode = params.get("render") === "1";
+  const [t, setT] = useState(() => clamp(Number(params.get("t") || 0), 0, definition.duration));
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const initial = Number(params.get("t") || 0);
-    if (!Number.isNaN(initial)) setT(initial);
-    if (params.get("render") === "1") document.body.classList.add("render");
-    window.__filmSetT = (next) => setT(next);
-    window.__filmReady = true;
-    window.__filmDuration = duration;
-  }, []);
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotion = () => setReducedMotion(motionQuery.matches);
+    syncMotion();
+    motionQuery.addEventListener?.("change", syncMotion);
 
-  const scene = sceneAt(t);
-  const lt = localTime(scene, t);
+    document.body.classList.toggle("render", renderMode);
+    document.body.classList.toggle("film-preview", !renderMode);
+    document.body.dataset.preset = definition.id;
+    window.__filmSetT = (next) => setT(clamp(Number(next), 0, definition.duration));
+    window.__filmReady = true;
+    window.__filmDuration = definition.duration;
+    window.__filmPreset = definition.id;
+
+    return () => {
+      motionQuery.removeEventListener?.("change", syncMotion);
+      delete document.body.dataset.preset;
+    };
+  }, [definition.duration, definition.id, renderMode]);
+
+  const onWheel = (event) => {
+    if (renderMode || definition.id !== "scroll-story") return;
+    setT((current) => clamp(current + event.deltaY * 0.0038, 0, definition.duration));
+  };
+
+  const onKeyDown = (event) => {
+    if (renderMode) return;
+    const handled = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "PageUp", "PageDown", "Home", "End"].includes(event.key);
+    if (!handled) return;
+    event.preventDefault();
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") setT((current) => clamp(current + 0.25, 0, definition.duration));
+    if (event.key === "ArrowLeft" || event.key === "ArrowUp") setT((current) => clamp(current - 0.25, 0, definition.duration));
+    if (event.key === "PageDown") setT((current) => clamp(current + 1, 0, definition.duration));
+    if (event.key === "PageUp") setT((current) => clamp(current - 1, 0, definition.duration));
+    if (event.key === "Home") setT(0);
+    if (event.key === "End") setT(definition.duration);
+  };
+
+  let film;
+  if (definition.id === "scroll-story") {
+    film = <ScrollStoryFilm reducedMotion={reducedMotion} t={t} />;
+  } else if (definition.id === "launch-film") {
+    film = <LaunchFilm reducedMotion={reducedMotion} t={t} />;
+  } else if (definition.id === "vox-collage") {
+    film = <VoxCollageFilm reducedMotion={reducedMotion} t={t} />;
+  } else {
+    const scene = sceneAt(t);
+    const lt = localTime(scene, t);
+    film = (
+      <>
+        <StageBackground />
+        {scene.id === "intro" && <IntroScene t={lt} />}
+        {scene.id === "ui" && <ProductScene t={lt} />}
+        {scene.id === "close" && <CloseScene t={lt} />}
+      </>
+    );
+  }
 
   return (
-    <div className="video-stage">
-      <StageBackground />
-      {scene.id === "intro" && <IntroScene t={lt} />}
-      {scene.id === "ui" && <ProductScene t={lt} />}
-      {scene.id === "close" && <CloseScene t={lt} />}
-    </div>
+    <>
+      <main
+        aria-label={`${definition.label} preview`}
+        className="video-stage"
+        onKeyDown={onKeyDown}
+        onWheel={onWheel}
+        tabIndex={renderMode ? -1 : 0}
+      >
+        {film}
+      </main>
+      {!renderMode && <PreviewControls definition={definition} setT={setT} t={t} />}
+    </>
   );
 }
 

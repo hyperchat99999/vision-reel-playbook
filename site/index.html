@@ -11,15 +11,19 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Open-source playbook + project generator</p>
-          <h1>Make the work explain itself.</h1>
-          <p class="lede">Turn a real product, workflow, or idea into a polished, word-synced film where every claim is proved on screen.</p>
+          <p class="eyebrow"><i></i> Open-source product-film studio</p>
+          <h1>Don’t record<br />the product.<br /><em>Direct it.</em></h1>
+          <p class="lede">Turn a real interface into a polished, deterministic film where every claim is proved on screen.</p>
           <pre class="install"><code>npx create-vision-reel@latest my-film</code></pre>
           <div class="actions">
             <a href="https://github.com/hyperchat99999/vision-reel-playbook/blob/main/MAKE_YOUR_FIRST_FILM.md">Try in 10 minutes</a>
             <a href="https://github.com/hyperchat99999/vision-reel-playbook" class="secondary">View on GitHub</a>
             <a href="https://www.npmjs.com/package/create-vision-reel" class="secondary">npm package</a>
           </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="../assets/launch-film-demo-still.png" alt="" />
+          <div class="hero-art-label"><span>FORMAT / 03</span><strong>EDITORIAL LAUNCH</strong></div>
         </div>
       </section>
 
@@ -41,14 +45,81 @@
         </article>
       </section>
 
+      <section class="formats" aria-labelledby="formats-title">
+        <div class="section-heading">
+          <p class="eyebrow"><i></i> Signature presets</p>
+          <h2 id="formats-title">Four ways to make the product act.</h2>
+          <p>Choose a starting format. Every preset uses the same reproducible browser-to-frames render contract.</p>
+        </div>
+        <div class="format-grid">
+          <article class="format-card format-card-portrait">
+            <div class="format-media portrait-media">
+              <video controls playsinline preload="metadata" poster="../assets/scroll-story-demo-still.png">
+                <source src="../assets/scroll-story-demo.mp4" type="video/mp4" />
+                <a href="../assets/scroll-story-demo.mp4">Download the cinematic scroll story.</a>
+              </video>
+            </div>
+            <div class="format-copy">
+              <span>01 / PORTRAIT / 18 SEC</span>
+              <h3>Cinematic scroll story</h3>
+              <p>A beat-synced 2.5D journey with connected proof actions, impact transitions, and an original locally generated score.</p>
+              <code>--type scroll-story</code>
+            </div>
+          </article>
+          <article class="format-card">
+            <div class="format-media landscape-media">
+              <video controls playsinline preload="metadata" poster="../assets/launch-film-demo-still.png">
+                <source src="../assets/launch-film-demo.mp4" type="video/mp4" />
+                <a href="../assets/launch-film-demo.mp4">Download the editorial launch film.</a>
+              </video>
+            </div>
+            <div class="format-copy">
+              <span>02 / LANDSCAPE / 12 SEC</span>
+              <h3>Editorial launch film</h3>
+              <p>A fast hook, bold kinetic type, original interface proof, and an ending built to be remembered.</p>
+              <code>--type launch-film</code>
+            </div>
+          </article>
+          <article class="format-card format-card-portrait format-card-vox">
+            <div class="format-media portrait-media">
+              <video controls playsinline preload="metadata" poster="../assets/vox-collage-demo-still.png">
+                <source src="../assets/vox-collage-demo.mp4" type="video/mp4" />
+                <a href="../assets/vox-collage-demo.mp4">Download the VOX collage explainer.</a>
+              </video>
+            </div>
+            <div class="format-copy">
+              <span>03 / PORTRAIT / 15 SEC</span>
+              <h3>VOX collage explainer</h3>
+              <p>Turn a concrete creator, product, or concept problem into connected paper actors, timed evidence, a visible payoff, and embedded local music.</p>
+              <code>--type vox-collage</code>
+            </div>
+          </article>
+          <article class="format-card format-card-portrait format-card-vox format-card-vox-studio">
+            <div class="format-media portrait-media">
+              <video controls playsinline preload="metadata" poster="../assets/vox-collage-higgsfield-demo-still.png">
+                <source src="../assets/vox-collage-higgsfield-demo.mp4" type="video/mp4" />
+                <a href="../assets/vox-collage-higgsfield-demo.mp4">Download the VOX collage studio cut.</a>
+              </video>
+            </div>
+            <div class="format-copy">
+              <span>04 / PRODUCTION PASS / 15 SEC</span>
+              <h3>VOX collage studio cut</h3>
+              <p>The deterministic story contract pushed through approved collage plates, connected Seedance motion, upbeat ElevenLabs narration, and a fast three-part score.</p>
+              <code>optional / source-provenanced</code>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="showcase">
-        <h2>See the included starter render</h2>
+        <p class="eyebrow"><i></i> Classic preset</p>
+        <h2>Start with the complete proof loop</h2>
         <p class="section-copy">This sample is rendered end-to-end from the included fictional interface, deterministic timeline, browser capture, and FFmpeg pipeline.</p>
         <video class="sample-film" controls muted playsinline poster="../assets/sample-still.png">
           <source src="../assets/sample-clean.mp4" type="video/mp4" />
           Your browser does not support the video element. <a href="../assets/sample-clean.mp4">Download the sample film.</a>
         </video>
-        <h2>Showcase patterns</h2>
+        <h2 class="pattern-title">More story patterns</h2>
         <p class="section-copy">Adapt one of the public-safe patterns below, then submit your result to the community showcase.</p>
         <div class="cards">
           <img src="../gallery/cards/app-native-explainer.svg" alt="App-native explainer" />

@@ -8,7 +8,12 @@ From the repo root:
 
 ```bash
 npm run render:sample
+npm run render:scroll-story
+npm run render:launch-film
+npm run render:vox-collage
 ```
+
+Signature presets default to 24 fps; the classic sample keeps its original 12 fps default.
 
 This starts the local app, captures frames, stitches `assets/sample-clean.mp4`, and stops the app.
 
@@ -27,6 +32,8 @@ node starter/render/render.cjs --url http://localhost:5173/video.html?render=1 -
 ```
 
 To mux a voiceover track into the render, add `--audio path/to/voice.mp3`. Without it, the render is silent.
+
+`render.cjs` also accepts `--width` and `--height`. The one-command wrapper accepts `--preset classic|scroll-story|launch-film|vox-collage`, `--fps`, `--width`, `--height`, and `--audio`.
 
 The app must already be running.
 

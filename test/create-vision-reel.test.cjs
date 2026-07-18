@@ -34,11 +34,40 @@ test("creates a self-contained project without installing dependencies", (t) => 
   assert.equal(generatedPackage.private, true);
   assert.equal(fs.existsSync(path.join(project, "starter", "app", "src", "video", "VideoApp.jsx")), true);
   assert.equal(fs.existsSync(path.join(project, "starter", "render", "render-sample.cjs")), true);
+  assert.equal(fs.existsSync(path.join(project, "starter", "scripts", "mix-vox-collage-studio.cjs")), true);
   assert.equal(fs.existsSync(path.join(project, "templates", "creative-brief.md")), true);
   assert.equal(fs.existsSync(path.join(project, "starter", "app", "node_modules")), false);
+  assert.deepEqual(
+    JSON.parse(fs.readFileSync(path.join(project, "starter", "app", "src", "video", "default-preset.json"), "utf8")),
+    { preset: "classic" }
+  );
 
   const check = runNpm(["run", "check"], project);
   assert.equal(check.status, 0, `${check.stdout}\n${check.stderr}`);
+});
+
+test("creates projects with each visual preset", (t) => {
+  const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), "create-vision-reel-presets-"));
+  t.after(() => fs.rmSync(sandbox, { recursive: true, force: true }));
+
+  for (const preset of ["scroll-story", "launch-film", "vox-collage"]) {
+    const result = runCli([preset, "--type", preset, "--no-install"], sandbox);
+    assert.equal(result.status, 0, result.stderr);
+    const config = JSON.parse(
+      fs.readFileSync(path.join(sandbox, preset, "starter", "app", "src", "video", "default-preset.json"), "utf8")
+    );
+    assert.deepEqual(config, { preset });
+    if (preset === "vox-collage") {
+      assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "VoxCollageFilm.jsx")), true);
+      assert.equal(fs.existsSync(path.join(sandbox, preset, "starter", "app", "src", "video", "vox-collage-config.json")), true);
+    }
+  }
+});
+
+test("rejects an unknown visual preset", () => {
+  const result = runCli(["sample-film", "--type", "unknown", "--no-install"], process.cwd());
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Unknown preset/);
 });
 
 test("refuses to write into a non-empty destination", (t) => {

@@ -8,6 +8,12 @@ out/
 qc/
 *.mp4
 !assets/sample-clean.mp4
+!assets/scroll-story-demo.mp4
+!assets/launch-film-demo.mp4
+!assets/vox-collage-demo.mp4
+!assets/vox-collage-higgsfield-demo.mp4
+!videos/*.mp4
+!website/public/media/*.mp4
 *.mov
 *.wav
 *.mp3

@@ -9,6 +9,8 @@ This repo is intentionally a playbook plus starter kit first.
 - Render and QC scripts.
 - Showcase examples and static site.
 - Cross-platform `create-vision-reel` project generator.
+- Four reusable presets: classic, cinematic scroll story, editorial launch film, and VOX collage explainer.
+- Deterministic local demo scores and video-aware audio override support.
 
 ## Next
 
@@ -21,7 +23,7 @@ This repo is intentionally a playbook plus starter kit first.
 ## Later
 
 - Stronger schemas for beat sheets and word anchors.
-- Multiple starter themes.
+- More community-contributed visual themes and film formats.
 - Example adapters for Remotion, Motion Canvas, and plain HTML.
 - CI-generated preview frames.
 

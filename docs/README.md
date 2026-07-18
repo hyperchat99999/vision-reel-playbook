@@ -11,6 +11,9 @@ Read in this order if you are new:
 7. `08-render-stitch-qc.md`
 8. `11-architecture.md`
 9. `09-ip-safety.md`
+10. `17-signature-presets.md`
+11. `18-vox-collage-explainer.md`
+12. `19-no-cost-video-generation.md`
 
 Use these when designing quality:
 

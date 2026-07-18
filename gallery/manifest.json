@@ -1,6 +1,38 @@
 {
   "items": [
     {
+      "id": "cinematic-scroll-story",
+      "title": "Cinematic scroll story",
+      "description": "An energetic portrait journey with beat-synced depth, connected proof actions, and an original locally generated score.",
+      "asset": "assets/scroll-story-demo-still.png",
+      "video": "assets/scroll-story-demo.mp4",
+      "pattern": "scroll-story"
+    },
+    {
+      "id": "editorial-launch-film",
+      "title": "Editorial launch film",
+      "description": "A fast campaign-style hook, kinetic typography, and original interface proof.",
+      "asset": "assets/launch-film-demo-still.png",
+      "video": "assets/launch-film-demo.mp4",
+      "pattern": "launch-film"
+    },
+    {
+      "id": "vox-collage-explainer",
+      "title": "VOX collage explainer",
+      "description": "A creator problem becomes a connected proof loop through configurable paper actors, timed evidence, QC, and embedded local music.",
+      "asset": "assets/vox-collage-demo-still.png",
+      "video": "assets/vox-collage-demo.mp4",
+      "pattern": "vox-collage"
+    },
+    {
+      "id": "vox-collage-studio-cut",
+      "title": "VOX collage studio cut",
+      "description": "The same creator-proof story with art-directed paper assembly, upbeat narration, and a fast three-chapter score.",
+      "asset": "assets/vox-collage-higgsfield-demo-still.png",
+      "video": "assets/vox-collage-higgsfield-demo.mp4",
+      "pattern": "vox-collage-studio"
+    },
+    {
       "id": "app-native-explainer",
       "title": "App-native explainer",
       "description": "A real product interface acts out the narration, sentence by sentence.",

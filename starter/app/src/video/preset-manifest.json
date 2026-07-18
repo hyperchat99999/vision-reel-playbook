@@ -1,0 +1,38 @@
+{
+  "classic": {
+    "id": "classic",
+    "label": "Classic product proof",
+    "description": "The original real-interface explainer.",
+    "duration": 24,
+    "width": 1920,
+    "height": 1080,
+    "beats": [0, 6, 18]
+  },
+  "scroll-story": {
+    "id": "scroll-story",
+    "label": "Cinematic scroll story",
+    "description": "A portrait 2.5D journey through the Vision Reel workflow.",
+    "duration": 18,
+    "width": 1080,
+    "height": 1920,
+    "beats": [0, 3.2, 7, 10.8, 14.6]
+  },
+  "launch-film": {
+    "id": "launch-film",
+    "label": "Editorial launch film",
+    "description": "A fast typographic product launch with real UI proof.",
+    "duration": 12,
+    "width": 1920,
+    "height": 1080,
+    "beats": [0, 2.2, 4.1, 7.2, 10.1]
+  },
+  "vox-collage": {
+    "id": "vox-collage",
+    "label": "VOX collage explainer",
+    "description": "A configurable paper-collage metaphor engine for products and concepts.",
+    "duration": 15,
+    "width": 720,
+    "height": 1280,
+    "beats": [0, 5, 10]
+  }
+}

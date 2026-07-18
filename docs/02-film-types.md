@@ -1,6 +1,6 @@
 # Film Types
 
-This playbook supports two main formats.
+This playbook supports five main formats.
 
 ## App-Native Explainer
 
@@ -37,6 +37,61 @@ Typical structure:
 3. Real UI acting sequence.
 4. Optional return to character context.
 5. Product proof and close.
+
+## Cinematic Scroll Story
+
+A portrait film that turns scrolling into a deliberate camera move through stacked chapters.
+
+Use when:
+
+- The story needs a strong mobile or social-first silhouette.
+- One idea should unfold through depth, scale, and spatial continuity.
+- You want a cinematic hook without losing deterministic browser rendering.
+
+Typical structure:
+
+1. A compact visual question.
+2. A layered product-world reveal.
+3. A chapter bridge that changes the visual rhythm.
+4. A focused UI proof moment.
+5. A decisive product-name ending.
+
+## Editorial Launch Film
+
+A landscape launch cut built from bold typography, graphic contrast, and a product proof beat.
+
+Use when:
+
+- A new product, feature, or repository needs a memorable announcement.
+- The message must work in a keynote, README, or launch page.
+- You want the energy of a campaign film while keeping the product legible.
+
+Typical structure:
+
+1. A high-contrast opening claim.
+2. A visual counterpoint or reframing question.
+3. Kinetic editorial statements.
+4. One original UI sequence as evidence.
+5. A restrained logo and call-to-action close.
+
+## VOX Collage Explainer
+
+A portrait editorial collage that makes a concrete problem, mechanism, and payoff visible through paper actors.
+
+Use when:
+
+- A product or concept needs a clear visual metaphor without generic B-roll.
+- The creator must connect spoken claims to relevant evidence.
+- The story benefits from tactile assembly, bold meaning-led color, and explicit before/after logic.
+- Exact labels and typography should remain deterministic even if generated plates are used.
+
+Typical structure:
+
+1. Show the real problem with recognizable work artifacts.
+2. Highlight the important word or claim.
+3. Connect that anchor to the visual actor that proves it.
+4. Lock the evidence onto the timeline or process.
+5. Finish with a visible quality or delivery result.
 
 ## What Not To Do
 

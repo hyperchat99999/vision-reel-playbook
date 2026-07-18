@@ -6,6 +6,7 @@ const { spawnSync } = require("child_process");
 
 const packageRoot = path.resolve(__dirname, "..");
 const packageJson = require(path.join(packageRoot, "package.json"));
+const presetManifest = require(path.join(packageRoot, "starter", "app", "src", "video", "preset-manifest.json"));
 const ignoredDirectoryNames = new Set(["node_modules", "dist", ".vite"]);
 const copyEntries = [
   ["starter/app", "starter/app"],
@@ -23,9 +24,10 @@ function printHelp() {
   console.log(`Create a standalone Vision Reel project.
 
 Usage:
-  create-vision-reel <directory> [--no-install]
+  create-vision-reel <directory> [--type <preset>] [--no-install]
 
 Options:
+  --type        Starting preset: ${Object.keys(presetManifest).join(", ")}
   --no-install  Create the project without installing dependencies
   --help        Show this help
   --version     Show the package version`);
@@ -39,10 +41,16 @@ function fail(message) {
 function parseArguments(argv) {
   const positionals = [];
   let install = true;
+  let preset = "classic";
 
-  for (const argument of argv) {
+  for (let index = 0; index < argv.length; index += 1) {
+    const argument = argv[index];
     if (argument === "--no-install") {
       install = false;
+    } else if (argument === "--type") {
+      preset = argv[index + 1];
+      index += 1;
+      if (!preset || preset.startsWith("-")) throw new Error("Provide a preset after --type.");
     } else if (argument.startsWith("-")) {
       throw new Error(`Unknown option "${argument}".`);
     } else {
@@ -53,8 +61,11 @@ function parseArguments(argv) {
   if (positionals.length !== 1) {
     throw new Error("Provide exactly one destination directory.");
   }
+  if (!presetManifest[preset]) {
+    throw new Error(`Unknown preset "${preset}". Choose: ${Object.keys(presetManifest).join(", ")}.`);
+  }
 
-  return { destination: positionals[0], install };
+  return { destination: positionals[0], install, preset };
 }
 
 function projectNameFromDirectory(directory) {
@@ -70,7 +81,7 @@ function shouldCopy(source) {
   return !relative.split(path.sep).some((part) => ignoredDirectoryNames.has(part));
 }
 
-function copyProject(stageDirectory, projectName) {
+function copyProject(stageDirectory, projectName, preset) {
   for (const [sourceRelative, destinationRelative] of copyEntries) {
     const source = path.join(packageRoot, sourceRelative);
     const destination = path.join(stageDirectory, destinationRelative);
@@ -90,9 +101,12 @@ function copyProject(stageDirectory, projectName) {
     `${JSON.stringify(templatePackage, null, 2)}\n`,
     "utf8"
   );
+
+  const defaultPresetPath = path.join(stageDirectory, "starter", "app", "src", "video", "default-preset.json");
+  fs.writeFileSync(defaultPresetPath, `${JSON.stringify({ preset }, null, 2)}\n`, "utf8");
 }
 
-function createProject(destinationArgument) {
+function createProject(destinationArgument, preset) {
   const destination = path.resolve(process.cwd(), destinationArgument);
   const parent = path.dirname(destination);
   const destinationExists = fs.existsSync(destination);
@@ -108,7 +122,7 @@ function createProject(destinationArgument) {
   const stage = fs.mkdtempSync(path.join(parent, `.${path.basename(destination)}-`));
 
   try {
-    copyProject(stage, projectNameFromDirectory(destination));
+    copyProject(stage, projectNameFromDirectory(destination), preset);
     if (destinationExists) fs.rmdirSync(destination);
     fs.renameSync(stage, destination);
   } catch (error) {
@@ -144,8 +158,9 @@ function main() {
 
   try {
     const options = parseArguments(argv);
-    const destination = createProject(options.destination);
+    const destination = createProject(options.destination, options.preset);
     console.log(`Created Vision Reel project at ${destination}`);
+    console.log(`Starting preset: ${options.preset}`);
     if (options.install) installDependencies(destination);
     console.log("Next: cd into the project and run npm run render:sample");
   } catch (error) {

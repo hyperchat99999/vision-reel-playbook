@@ -1,0 +1,64 @@
+{
+  "project": {
+    "subject": "Vision Reel",
+    "mode": "product",
+    "eyebrow": "Paper collage explainer",
+    "closingLine": "One story. One system. Ready to show."
+  },
+  "beats": [
+    {
+      "id": "fragments",
+      "start": 0,
+      "end": 5,
+      "kicker": "01 / The creator problem",
+      "headline": "The voice says proof. The footage says filler.",
+      "narration": "Creators waste hours finding footage that actually proves each claim.",
+      "background": "#b9431f",
+      "ink": "#171411",
+      "accent": "#f5df70",
+      "objects": [
+        { "id": "transcript", "kind": "transcript", "label": "Voiceover", "x": 8, "y": 27, "width": 44, "height": 22, "rotate": -4, "enter": 0.3, "from": "left" },
+        { "id": "asset-bin", "kind": "asset-bin", "label": "Random B-roll", "x": 55, "y": 25, "width": 37, "height": 24, "rotate": 5, "enter": 0.75, "from": "right" },
+        { "id": "timeline-gap", "kind": "timeline-gap", "label": "Timeline gap", "x": 7, "y": 56, "width": 84, "height": 15, "rotate": 1, "enter": 1.2, "from": "bottom" },
+        { "id": "mismatch", "kind": "mismatch", "label": "Meaning mismatch", "x": 53, "y": 70, "width": 35, "height": 13, "rotate": -5, "enter": 1.75, "from": "right" },
+        { "id": "cursor", "kind": "cursor", "label": "Still searching", "x": 31, "y": 70, "width": 15, "height": 11, "rotate": 12, "enter": 2.1, "from": "bottom" }
+      ]
+    },
+    {
+      "id": "alignment",
+      "start": 5,
+      "end": 10,
+      "kicker": "02 / The Vision Reel method",
+      "headline": "Anchor the word. Assign the visual actor.",
+      "narration": "Vision Reel pairs each claim with proof, then locks both to time.",
+      "background": "#372270",
+      "ink": "#15121d",
+      "accent": "#68dfbd",
+      "objects": [
+        { "id": "anchor", "kind": "transcript-anchor", "label": "Word anchor", "x": 8, "y": 29, "width": 39, "height": 20, "rotate": -2, "enter": 0.25, "from": "left" },
+        { "id": "proof", "kind": "product-proof", "label": "Real UI proof", "x": 54, "y": 25, "width": 38, "height": 25, "rotate": 2, "enter": 0.85, "from": "right" },
+        { "id": "connector", "kind": "connector", "label": "Meaning linked", "x": 40, "y": 39, "width": 24, "height": 13, "rotate": 0, "enter": 1.35, "from": "left" },
+        { "id": "timeline", "kind": "timeline", "label": "Timed evidence", "x": 7, "y": 57, "width": 85, "height": 16, "rotate": 0, "enter": 1.8, "from": "bottom" },
+        { "id": "sync", "kind": "sync-badge", "label": "Locked", "x": 37, "y": 72, "width": 27, "height": 13, "rotate": -3, "enter": 2.55, "from": "bottom" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "start": 10,
+      "end": 15,
+      "kicker": "03 / The finished proof loop",
+      "headline": "Every claim lands with evidence.",
+      "narration": "The result is relevant visuals, clean pacing, and a quality-checked export.",
+      "background": "#087e72",
+      "ink": "#111715",
+      "accent": "#ff6b4a",
+      "objects": [
+        { "id": "preview", "kind": "preview", "label": "Coherent reel", "x": 8, "y": 26, "width": 40, "height": 44, "rotate": -3, "enter": 0.25, "from": "left" },
+        { "id": "qc", "kind": "qc-card", "label": "Frame QC", "x": 54, "y": 28, "width": 38, "height": 22, "rotate": 3, "enter": 0.85, "from": "right" },
+        { "id": "timeline", "kind": "timeline", "label": "15 seconds / 3 anchors", "x": 48, "y": 54, "width": 44, "height": 15, "rotate": -1, "enter": 1.4, "from": "right" },
+        { "id": "export", "kind": "export-card", "label": "MP4 + contact sheet", "x": 50, "y": 70, "width": 40, "height": 13, "rotate": 2, "enter": 1.95, "from": "bottom" },
+        { "id": "seal", "kind": "seal", "label": "Ready to publish", "x": 12, "y": 72, "width": 29, "height": 13, "rotate": -7, "enter": 2.45, "from": "bottom" }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,51 @@ These are fictional examples that demonstrate the playbook patterns. They are no
 - Contact sheet: [`assets/sample-contact-sheet.jpg`](assets/sample-contact-sheet.jpg)
 - Pattern: voiceover-first structure, deterministic UI states, browser frame capture, FFmpeg stitch.
 
+## Signature Demo: Cinematic Scroll Story
+
+[![Cinematic scroll-story demo still](assets/scroll-story-demo-still.png)](assets/scroll-story-demo.mp4)
+
+- Video: [`assets/scroll-story-demo.mp4`](assets/scroll-story-demo.mp4)
+- Contact sheet: [`assets/scroll-story-demo-contact-sheet.jpg`](assets/scroll-story-demo-contact-sheet.jpg)
+- Format: 18 seconds, portrait 9:16, beat-synced 2.5D chapters, connected proof actions, impact transitions, and scroll-led reveals.
+- Audio: original 120 BPM procedural score generated locally and embedded in the MP4.
+- Cost: no paid video, image, or audio generation service.
+- QA and provenance: [`design-references/scroll-story/energy-pass-qa.md`](design-references/scroll-story/energy-pass-qa.md).
+- Render: `npm run render:scroll-story`
+
+## Signature Demo: Editorial Launch Film
+
+[![Editorial launch-film demo still](assets/launch-film-demo-still.png)](assets/launch-film-demo.mp4)
+
+- Video: [`assets/launch-film-demo.mp4`](assets/launch-film-demo.mp4)
+- Contact sheet: [`assets/launch-film-demo-contact-sheet.jpg`](assets/launch-film-demo-contact-sheet.jpg)
+- Format: 12 seconds, landscape 16:9, kinetic type, visual contrast, and a product-proof finish.
+- Render: `npm run render:launch-film`
+
+## Signature Demo: VOX Collage Explainer
+
+[![VOX collage explainer demo still](assets/vox-collage-demo-still.png)](assets/vox-collage-demo.mp4)
+
+- Video: [`assets/vox-collage-demo.mp4`](assets/vox-collage-demo.mp4)
+- Contact sheet: [`assets/vox-collage-demo-contact-sheet.jpg`](assets/vox-collage-demo-contact-sheet.jpg)
+- Format: 15 seconds, portrait 9:16, creator problem/solution story with connected paper actors and deterministic secondary actions.
+- Audio: original procedural music generated locally and embedded in the MP4.
+- Cost: no paid video, image, or audio generation service.
+- Render: `npm run render:vox-collage`
+- Customize: `starter/app/src/video/vox-collage-config.json`
+
+## Production Pass: VOX Collage Studio Cut
+
+[![VOX collage studio-cut still](assets/vox-collage-higgsfield-demo-still.png)](assets/vox-collage-higgsfield-demo.mp4)
+
+- Video: [`assets/vox-collage-higgsfield-demo.mp4`](assets/vox-collage-higgsfield-demo.mp4)
+- Contact sheet: [`assets/vox-collage-higgsfield-demo-contact-sheet.jpg`](assets/vox-collage-higgsfield-demo-contact-sheet.jpg)
+- Format: 15 seconds, vertical 480p, three connected five-second paper-assembly clips.
+- Visual generation: Nano Banana 2 Lite (`HIGH`) stills and Seedance 2 Mini 480p motion, capped at 18 total Higgsfield credits used.
+- Audio: upbeat ElevenLabs voice design plus an instrumental Music v2 score with five- and ten-second transition lifts.
+- Provenance and QA: `design-references/vox-collage/`.
+- Relationship to the preset: this is the optional production pass; `npm run render:vox-collage` remains the deterministic, paid-service-free reference implementation.
+
 ## 1. App-Native Explainer
 
 ![App-native explainer card](gallery/cards/app-native-explainer.svg)

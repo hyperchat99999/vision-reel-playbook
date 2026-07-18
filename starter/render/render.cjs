@@ -31,6 +31,8 @@ async function main() {
   const url = args.url || "http://localhost:5173/video.html?render=1";
   const fps = Number(args.fps || 30);
   const start = Number(args.start || 0);
+  const width = Number(args.width || 1920);
+  const height = Number(args.height || 1080);
   const outPath = path.resolve(args.out || "out/sample.mp4");
   const framesDir = path.resolve(args["frames-dir"] || "frames/sample");
   const audioPath = args.audio ? path.resolve(args.audio) : null;
@@ -39,10 +41,13 @@ async function main() {
 
   fs.mkdirSync(framesDir, { recursive: true });
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  for (const entry of fs.readdirSync(framesDir)) {
+    if (/^\d{6}\.png$/.test(entry)) fs.rmSync(path.join(framesDir, entry));
+  }
 
   const browser = await puppeteer.launch({
     headless: "new",
-    defaultViewport: { width: 1920, height: 1080, deviceScaleFactor: 1 },
+    defaultViewport: { width, height, deviceScaleFactor: 1 },
     args: ["--no-sandbox", "--hide-scrollbars", "--force-device-scale-factor=1"]
   });
 
